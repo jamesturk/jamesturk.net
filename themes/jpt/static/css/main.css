@@ -25,6 +25,10 @@ html, body {
     height: 100%;
     display: table;
 }
+.nobackground {
+    height: 100%;
+    display: table;
+}
 
 .banner {
     text-align: center;
@@ -43,6 +47,27 @@ html, body {
     text-shadow: 0 1px 1px black;
 }
 
+.post {
+    background: white;
+    margin: 5% 20%;
+}
+.post-title {
+    margin-bottom: 0px;
+}
+.post-body {
+    line-height: 1.5;
+    font-size: 1.2em;
+    margin-top: 2em;
+}
+.post-meta {
+    color: #999;
+    float: right;
+    clear: both;
+}
+.clear {
+    clear: both;
+}
+
 
 .bio {
     margin: 0 20%; 
@@ -51,8 +76,6 @@ html, body {
 .bio a {
     color: white;
 }
-
-
 .front-section {
     margin: 1em;
     background-color: rgba(32,36,48,0.9);

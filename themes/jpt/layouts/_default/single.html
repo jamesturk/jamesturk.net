@@ -1,0 +1,14 @@
+{{ partial "header.html" . }}
+
+<div class="nobackground">
+    <div class="post">
+        <h1 class="post-title"> {{ .Title }} </h1>
+        <div class="post-meta"> published {{ .Date.Format "Jan 2, 2006" }} by James Turk </div>
+        <div class="clear"> </div>
+        <div class="post-body">
+            {{ .Content }}
+        </div>
+    </div>
+</div>
+
+{{ partial "footer.html" . }}
