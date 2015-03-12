@@ -2,31 +2,35 @@
 
 /* general overrides */
 html, body {
-    height: 100%;
     font-family: 'Raleway', sans-serif;
 }
 .pure-menu {
     background-color: rgb(32,36,48);
+    color: #888;
 }
 .pure-menu-heading {
     text-transform: none;
     font-weight: 500;
+    color: #888;
 }
 .pure-menu li a:hover {
-    background-color: #777;
+    background-color: #888;
     color: rgb(32,36,48);
+}
+a:hover {
+    text-decoration: none;
 }
 
 /* footer */
 .footer {
     font-size: 0.8em;
     background-color: rgb(32,36,48);
-    color: #eee;
+    color: white;
     padding: 0.5em 10%;
     text-align: center;
 }
 .footer a {
-    color: #eee;
+    color: white;
 }
 
 /* index.html */
@@ -64,7 +68,7 @@ html, body {
     color: white;
 }
 .front-section {
-    margin: 1em;
+    margin: 1em 1em 2em 1em;
     background-color: rgba(32,36,48,0.9);
     color: white;
     text-align: center;
@@ -74,6 +78,8 @@ html, body {
     font-size: 1.4em;
     font-weight: 400;
     text-shadow: 0 1px 1px black;
+    padding: 0.4em 0;
+    margin-bottom: 0;
 }
 .front-section ul {
     list-style-type: none;
@@ -89,7 +95,7 @@ html, body {
 }
 .front-section li a {
     text-align: center;
-    color: #eee;
+    color: white;
 }
 
 /* post template */
@@ -100,6 +106,9 @@ html, body {
 .post {
     background: white;
     margin: 5% 20%;
+}
+.post a, .post a:visited, .post a:hover {
+    color: black;
 }
 .post-title {
     margin-bottom: 0px;
