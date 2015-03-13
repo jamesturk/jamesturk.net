@@ -1,4 +1,4 @@
-baseurl = "http://jamesturk.net"
+baseurl = "https://jamesturk.net"
 languageCode = "en-us"
 title = "jamesturk"
 theme = "jpt"
