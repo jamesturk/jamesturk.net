@@ -4,6 +4,7 @@
 html, body {
     font-family: 'Raleway', sans-serif;
     height: 100%;
+    background-color: rgb(32,36,48);
 }
 .pure-menu {
     background-color: rgb(32,36,48);
@@ -104,6 +105,7 @@ a:hover {
 .nobackground {
     height: 100%;
     display: table;
+    background: white;
 }
 .post {
     background: white;
