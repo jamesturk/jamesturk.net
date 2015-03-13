@@ -22,6 +22,18 @@ html, body {
 a:hover {
     text-decoration: none;
 }
+.err404 {
+    width: 100%;
+    font-size: 1.3em;
+    text-align: center;
+}
+.err404 p {
+    margin: 0 20%;
+    color: white;
+}
+.err404 a {
+    color: white;
+}
 
 /* footer */
 .footer {
