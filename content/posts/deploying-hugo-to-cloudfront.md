@@ -102,3 +102,8 @@ s3cmd put -P --mime-type=text/css public/css/main.css &&
 ```
 
 And now every time you're ready to publish a simple `./publish.sh` does the trick.
+
+
+## Questions? Suggestions?
+
+<a href="https://twitter.com/intent/tweet?text=@jamesturk%20...&related=jamesturk"> <i class="fa fa-twitter"></i> Tweet at me</a>
