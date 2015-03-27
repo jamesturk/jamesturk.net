@@ -1,0 +1,18 @@
+{{ partial "header.html" . }}
+
+<div class="nobackground">
+    <div class="post">
+        <h2>All Posts</h2>
+    <ul class="posts">
+    {{ range .Paginator.Pages }}
+    <li>
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+        <div class="post-meta"> {{ .Date.Format "January 2, 2006" }} </div>
+        <div class="clear"> </div>
+    </li>
+    {{ end }}
+    </ul>
+    </div>
+</div>
+
+{{ partial "footer.html" . }}

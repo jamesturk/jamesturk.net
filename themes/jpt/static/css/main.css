@@ -155,6 +155,18 @@ code {
 }
 
 
+/* post list */
+.posts {
+    list-style-type: none;
+}
+.posts li {
+    margin-bottom: 0.8em;
+}
+.posts a {
+    font-size: 1.2em;
+}
+
+/* media query for screens over 700px */
 @media screen and (min-width: 700px) {
     .bio {
         font-size: 1.2em;

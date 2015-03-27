@@ -46,7 +46,7 @@
             <div class="front-section">
                 <h2>Posts</h2>
                 <ul>
-                    {{ range .Paginator.Pages }}
+                    {{ range first 5 .Paginator.Pages }}
                     <li>
                         <a href="{{ .Permalink }}">
                             {{ .Title }}
@@ -54,6 +54,9 @@
                         {{ .Params.author }}
                     </li>
                     {{ end }}
+                    <li>
+                        <a href="/posts/">more&hellip;</a>
+                    </li>
                 </ul>
             </div>
         </div>
