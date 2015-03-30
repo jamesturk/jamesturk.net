@@ -2,19 +2,16 @@
 Description = ""
 date = "2015-03-26T15:23:30-04:00"
 title = "Deploying Static Sites to CloudFront"
-draft = true
+draft = false
 
 +++
 
-Like most developers, I've written my own blog software half a dozen times.  I've spent a lot more time doing that than writing content but decided this time I'd do something different.  I wanted to keep things as simple as possible but still have an excuse to learn a few new things.  
+Like many developers, I've written my own blog software half a dozen times.  I've probably spent a lot more time tweaking the software than writing posts so this time I decided to do something different.  I wanted to keep things as simple as possible but still have an excuse to learn a few new things.
 
-For generation I wound up settling on [Hugo](http://gohugo.io).
-Using Hugo let me explore Go's template syntax and poke around at a pretty well-established Go code base.
-I don't intend to get into a full comparison of static site generators but another deciding factor was [Hugo's LiveReload](http://gohugo.io/extras/livereload/) feature, which allows me to write in one window and see the results in a browser window as I save.
+I wound up settling on [Hugo](http://gohugo.io) hosted on Amazon S3 w/ CloudFront in front of it.  
+One of the deciding factors that made CloudFront come out on top is that I wanted to see what it'd take to get things served over HTTPS.   Given limitations in GitHub pages and S3, CloudFront was the way to go.
 
 While there are a few Hugo-specific things here (e.g. the publish directory and reference to running `hugo` to build the site), everything <abbr title="Amazon Web Services">AWS</abbr>-related would work just as well for Pelican, jekyll, or hand-written HTML.
-
-I also figured I'd try to get the site served over HTTPS.   Given limitations in GitHub pages and S3, [Amazon CloudFront](https://aws.amazon.com/cloudfront/) wound up being the way to go for that.
 
 
 
@@ -107,7 +104,9 @@ s3cmd put -P --mime-type=text/css public/css/main.css &&
 ./cf.py
 ```
 
-And now every time you're ready to publish a simple `./publish.sh` does the trick.
+Every time you're ready to publish a simple `./publish.sh` does the trick.
+
+And now you have a fast, reliable, low-maintenance site for under $1/month.  ($0.50 for the Route 53 zone is the largest expense, then pennies for S3 and CloudFront costs.)
 
 ## Questions? Suggestions?
 
