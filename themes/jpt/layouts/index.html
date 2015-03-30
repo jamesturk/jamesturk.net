@@ -47,14 +47,12 @@
                 <h2>Posts</h2>
                 <ul>
                     {{ range first 5 .Paginator.Pages }}
-                    <li>
-                        <a href="{{ .Permalink }}">
-                            {{ .Title }}
-                        </a>
-                        {{ .Params.author }}
+                    <li class="clear front-post">
+                        <a href="{{ .Permalink }}">{{ .Title }}</a>
+                        <span class="front-meta">{{ .Date.Format "Jan 2006" }}</a>
                     </li>
                     {{ end }}
-                    <li>
+                    <li class="more-link">
                         <a href="/posts/">more&hellip;</a>
                     </li>
                 </ul>
