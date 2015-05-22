@@ -71,29 +71,26 @@ Now go ahead and make an update and run the s3cmd publishing steps and you'll no
 
 To speed things up you can manually invalidate pages out of the CloudFront distribution.  (It'll still take 10-15 minutes for the edge nodes to receive the invalidation.)
 
-I've written a small Python script to automatically invalidate all objects in the public directory:
+*Update, May 22nd 2015*: This blog post originally used pathlib to get all files in the public/
+directory, but CloudFront has been updated to accept glob invalidations.  Now invalidating `/*`
+will count as a single invalidation and ensure the entire tree gets invalidated.
 
 ```
 #!/usr/bin/env python3
-import pathlib
 import boto.cloudfront
 
 # Credentials in ~/.aws/credentials
 DISTRIBUTION_ID = ''      # needs to be set, looks like E11J4SQ1T6811B
 
 if __name__ == '__main__':
-    # every file under public
-    paths = ['/'+str(p.relative_to('public'))
-             for p in pathlib.Path('public').rglob('*') if p.is_file()]
-
     cf = boto.cloudfront.CloudFrontConnection()
-    cf.create_invalidation_request(DISTRIBUTION_ID, paths)
-    print('created invalidation request for {} files'.format(len(paths)))
+    cf.create_invalidation_request(DISTRIBUTION_ID, '/*')
 ```
 
-This is overkill as it'll invalidate all objects, it'd be possible to figure out which objects have changed and only invalidate those.
+This is overkill as it'll invalidate all objects, it is also possible to figure out which objects have changed and only invalidate those.
 
-Note that by default you're allowed 1,000 free object invalidations a month, and then you start paying $0.005 per file.  For my purposes this is more than enough, but something to consider if you're constantly republishing.
+Note that by default you're allowed 1,000 free invalidations a month, and then you start paying $0.005 per file.
+For my purposes this is more than enough, but something to consider if you're constantly republishing.
 
 I save that file as `cf.py` and then update the `publish.sh` to look like:
 
