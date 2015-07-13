@@ -1,6 +1,6 @@
 +++
-date = "2015-05-29T12:00:00-05:00"
-draft = true
+date = "2015-07-13T12:00:00-05:00"
+draft = false
 title = "Eight Years"
 
 +++
@@ -9,7 +9,7 @@ title = "Eight Years"
 
 ### May 29th, 2007
 
-I'd been living in DC for two days. I already liked it quite a bit, which was lucky as I'd made plans to move there sight unseen.
+I'd been living in DC for a little under a week. I already liked it quite a bit, which was lucky as I'd made plans to move there sight unseen.
 
 In December of 2006 I'd accepted a position with [Sunlight Foundation](https://sunlightfoundation.com), an up-and-coming nonprofit with a mission I cared about and which already seemed to place an importance on technology.  In fact my position was listed as being within [Sunlight Labs, "a Sunlight foundation pilot project to prototype tech ideas"](https://web.archive.org/web/20060820042725/http://www.sunlightlabs.com/).
 
@@ -19,7 +19,7 @@ I got pretty lucky.  It was.
 
 ### The Next Eight Years
 
-From my initial time as an intern, to my current position as Director of Sunlight Labs, Sunlight has been an amazing place for me.
+From my initial time as an intern, to leading the Open States project from a remote office in Boston, to my time as Director of Sunlight Labs, Sunlight was been an amazing place for me.
 
 Sunlight is the place that...
 
@@ -30,6 +30,14 @@ Sunlight is the place that...
 
 * when life had me moving to Boston, allowed me to open a small Boston office.  (That's the team that ultimately made Open States what it is today.)
 
-* allowed me to speak to and work with like-minded civic hackers all around the world.
+* allowed me to meet and collaborate with like-minded civic hackers all around the world.
 
 * let me work with some of the best, smartest, most passionate people I'll ever meet.
+
+### Moving On
+
+So in June when it became clear to me that it was time to move on, I did so with a heavy heart but also eight years of fond memories, great experience, and wonderful friends.
+
+And to all of you that made Sunlight such a wonderful eight years &mdash; coworkers, collaborators, peers, users, friends &mdash; thank you.
+
+And please, [stay in touch.](mailto:james.p.turk@gmail.com)
