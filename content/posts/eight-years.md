@@ -19,7 +19,7 @@ I got pretty lucky.  It was.
 
 ### The Next Eight Years
 
-From my initial time as an intern, to leading the Open States project from a remote office in Boston, to my time as Director of Sunlight Labs, Sunlight was been an amazing place for me.
+From my initial time as an intern, to leading the Open States project from a remote office in Boston, to my time as Director of Sunlight Labs, Sunlight was an amazing place for me.
 
 Sunlight is the place that...
 
