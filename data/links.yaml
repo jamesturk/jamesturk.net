@@ -69,8 +69,13 @@ links:
         - category: sunlight
           date: 2012-02-11
           title: New Districts in Sunlight Congress API
-    2011:
+          url: https://sunlightfoundation.com/2012/11/02/new-districts-in-sunlight-congress-api/
         - category: elsewhere
+          date: 2012-03-13
+          title: "Open States project achieves grand milestone"
+          url: https://opensource.com/government/12/3/open-states-project-achieves-grand-milestone
+    2011:
+        - category: interview
           date: 2011-09-26
           title: "Open States: Transparency for state governments using open data"
           url: https://opensource.com/government/11/9/open-states-transparency-state-governments-using-open-data
@@ -163,7 +168,6 @@ links:
           date: 2010-12-10
           title: Sunlight Congress API & The 112th Congress
           url: https://sunlightfoundation.com/2010/12/10/congress-api-112-congress/
-          url: https://sunlightfoundation.com/2012/11/02/new-districts-in-sunlight-congress-api/
     2009:
         - category: sunlight
           date: 2009-01-08
