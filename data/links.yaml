@@ -1,0 +1,237 @@
+---
+years: [2016, 2015, 2014, 2013, 2012, 2011, 2010, 2009, 2008, 2007]
+links:
+    2016:
+        - category: sunlight
+          date: 2016-11-01
+          title: "Sunlight Labs update:  Nonprofits step up to preserve tools for transparency"
+          url: https://sunlightfoundation.com/2016/11/01/sunlight-labs-update-nonprofits-step-up-to-preserve-tools-for-transparency/
+        - category: elsewhere
+          date: 2016-11-16
+          title: Why keep Open States going?
+          url: https://opensource.com/government/16/11/why-open-states
+    2015:
+        - category: sunlight
+          date: 2015-02-04
+          title: "#Hack4Congress Boston: Making our lawmakers more responsive to the public"
+          url: https://sunlightfoundation.com/2015/02/04/hack4congress-boston/
+        - category: sunlight
+          date: 2015-04-07
+          title: Join Sunlight at PyCon 2015
+          url: https://sunlightfoundation.com/2015/04/07/join-us-at-pycon-2015/
+        - category: interview
+          date: 2015-02-19
+          title: Technically.DC Interview
+          url: https://technical.ly/dc/2015/02/19/how-i-work-sunlight-labs-james-turk/
+        - category: personal
+          date: 2015-03-26
+          title: Deploying Static Sites to CloudFront
+          url: /posts/deploying-hugo-to-cloudfront/
+        - category: personal
+          date: 2015-07-13
+          title: Eight Years
+          url: /posts/eight-years/
+    2014:
+        - category: sunlight
+          date: 2014-05-12
+          title: Highlights from the first-ever PoplusCon in Santiago
+          url: https://sunlightfoundation.com/2014/05/12/highlights-from-the-first-ever-popluscon-in-santiago/
+        - category: sunlight
+          date: 2014-12-01
+          title: How we’re updating Sunlight’s legislative APIs for 2015
+          url: https://sunlightfoundation.com/2014/12/01/how-were-updating-sunlights-legislative-apis-for-2015/
+    2013:
+        - category: sunlight
+          date: 2013-03-11
+          title: "Open States: Transparency Report Card"
+          url: https://sunlightfoundation.com/2013/03/11/openstates-report-card/
+        - category: sunlight
+          date: 2013-06-04
+          title: National Day of Civic Hacking 2013
+          url: https://sunlightfoundation.com/2013/06/04/national-day-of-civic-hacking-2013/
+    2012:
+        - category: sunlight
+          date: 2012-02-17
+          title: Help Open States Rate State Websites
+          url: https://sunlightfoundation.com/2012/02/17/help-open-states-rate-state-websites/
+        - category: sunlight
+          date: 2012-12-03
+          title: "Open States: 50!"
+          url: https://sunlightfoundation.com/2012/03/12/open-states-50/
+        - category: sunlight
+          date: 2012-07-12
+          title: What Redistricting Means For Sunlight’s APIs
+          url: https://sunlightfoundation.com/2012/07/12/redistricting-2012/
+        - category: sunlight
+          date: 2012-07-27
+          title: A New Face For Open States
+          url: https://sunlightfoundation.com/2012/07/27/a-new-face-for-openstates/
+        - category: sunlight
+          date: 2012-02-11
+          title: New Districts in Sunlight Congress API
+    2011:
+        - category: elsewhere
+          date: 2011-09-26
+          title: "Open States: Transparency for state governments using open data"
+          url: https://opensource.com/government/11/9/open-states-transparency-state-governments-using-open-data
+        - category: presentation
+          date: 2011-03-14
+          title: Opening Government With Python
+          url: https://us.pycon.org/2011/schedule/presentations/285/
+        - category: sunlight
+          date: 2011-01-05
+          title: 112th Congress live in Congress API
+          url: https://sunlightfoundation.com/2011/01/05/112th-congress-in-congress-api/
+        - category: sunlight
+          date: 2011-01-14
+          title: "We Have a Winner: Contributor Raffle Update"
+          url: https://sunlightfoundation.com/2011/01/14/we-have-a-winner-raffle/
+        - category: sunlight
+          date: 2011-01-21
+          title: "Sunlight Labs Virtual Office Hours: Jan 28 @ 3pm"
+          url: https://sunlightfoundation.com/2011/01/21/virtual-office-hours-jan-28/
+        - category: sunlight
+          date: 2011-02-03
+          title: New Hampshire Opens Its Legislative Data
+          url: https://sunlightfoundation.com/2011/02/03/new-hampshire-open-legislative-data/
+        - category: sunlight
+          date: 2011-03-02
+          title: Sunlight @ PyCon 2011
+          url: https://sunlightfoundation.com/2011/03/02/sunlight-pycon-2011/
+        - category: sunlight
+          date: 2011-03-21
+          title: Sunlight Labs & Google Summer of Code 2011
+          url: https://sunlightfoundation.com/2011/03/21/sunlightlabs-gsoc2011-accepted/
+        - category: sunlight
+          date: 2011-05-06
+          title: Open States Reaches Halfway Mark
+          url: https://sunlightfoundation.com/2011/05/06/open-states-halfway/
+        - category: sunlight
+          date: 2011-09-12
+          title: "Open States API: One Year Later"
+          url: https://sunlightfoundation.com/2011/09/12/open-states-api-1-yr-later/
+        - category: sunlight
+          date: 2011-09-26
+          title: "Labs Olympics 2011: How Is Babby?"
+          url: https://sunlightfoundation.com/2011/09/26/how-is-babby/
+        - category: sunlight
+          date: 2011-10-28
+          title: Open States Source Visualized
+          url: https://sunlightfoundation.com/2011/10/28/openstates-source-visualized/
+        - category: personal
+          date: 2011-02-24
+          title: Today in History
+          url: /posts/today-in-history/
+        - category: personal
+          date: 2011-03-11
+          url: /posts/that-libyan-dictator/
+          title: That Libyan Dictator
+    2010:
+        - category: sunlight
+          date: 2010-03-19
+          title: Announcing Our Google Summer of Code 2010 Participation
+          url: https://sunlightfoundation.com/2010/03/19/announcing-our-google-summer-code-2010-participation/
+        - category: sunlight
+          date: 2010-04-28
+          title: Summer of Code 2010 Participants
+          url: https://sunlightfoundation.com/2010/04/28/summer-code-2010-participants/
+        - category: sunlight
+          date: 2010-05-10
+          title: "Fifty State Project: Redux"
+          url: https://sunlightfoundation.com/2010/05/10/fifty-state-project-redux/
+        - category: sunlight
+          date: 2010-08-12
+          title: Sunlight Labs Community Survey
+          url: https://sunlightfoundation.com/2010/08/12/community-survey/
+        - category: sunlight
+          date: 2010-08-30
+          title: "Google Summer of Code: Open State Project"
+          url: https://sunlightfoundation.com/2010/08/30/gsoc-2010-openstates/
+        - category: sunlight
+          date: 2010-09-01
+          title: Introducing the Open State Project API
+          url: https://sunlightfoundation.com/2010/09/01/introducing-open-state-project-api/
+        - category: sunlight
+          date: 2010-10-13
+          title: Celebrating 100 GitHub Projects
+          url: https://sunlightfoundation.com/2010/10/13/celebrating-100-github-projects/
+        - category: sunlight
+          date: 2010-12-06
+          title: "Reminder: Submit a Patch, Win a Kindle"
+          url: https://sunlightfoundation.com/2010/12/06/reminder-open-source-contest/
+        - category: sunlight
+          date: 2010-12-10
+          title: Sunlight Congress API & The 112th Congress
+          url: https://sunlightfoundation.com/2010/12/10/congress-api-112-congress/
+          url: https://sunlightfoundation.com/2012/11/02/new-districts-in-sunlight-congress-api/
+    2009:
+        - category: sunlight
+          date: 2009-01-08
+          title: Looking At The NYTimes Congress API
+          url: https://sunlightfoundation.com/2009/01/08/nytimes-congress-api/
+        - category: sunlight
+          date: 2009-02-02
+          title: Taking a look at the GOP Anywhere API
+          url: https://sunlightfoundation.com/2009/02/02/gop-anywhere-api/
+        - category: sunlight
+          date: 2009-02-17
+          title: "Open Government Hackathon: Chicago, March 29-31"
+          url: https://sunlightfoundation.com/2009/02/17/open-government-hackathon-chicago/
+        - category: sunlight
+          date: 2009-04-10
+          title: "Fifty States Project: April 10th Status Report"
+          url: https://sunlightfoundation.com/2009/04/10/fifty-states-project-april-10th-status-report/
+        - category: sunlight
+          date: 2009-04-21
+          title: Announcing Our Summer of Code 2009 Participants
+          url: https://sunlightfoundation.com/2009/04/21/gsoc-2009-participants/
+        - category: sunlight
+          date: 2009-09-15
+          title: ThisWeKnow Gets Praise in Senate
+          url: https://sunlightfoundation.com/2009/09/15/thisweknow-senate/
+        - category: sunlight
+          date: 2009-09-24
+          title: Sunlight Labs API One Year Later
+          url: https://sunlightfoundation.com/2009/09/24/sunlight-labs-api-one-year-later/
+        - category: sunlight
+          date: 2009-10-01
+          title: Take 5 Minutes to Help the Fifty State Project
+          url: https://sunlightfoundation.com/2009/10/01/5-mins-fifty-state-project/
+        - category: sunlight
+          date: 2009-10-27
+          title: Recovery.gov Augmented Reality Mashup
+          url: https://sunlightfoundation.com/2009/10/27/recoverygov-contracts-your-phone/
+    2008:
+        - category: interview
+          date: 2008-07-19
+          title: Netzpolitik Interview (Berlin)
+          url: https://netzpolitik.org/2008/netzpolitik-podcast-062-the-sunlight-foundation/
+        - category: sunlight
+          date: 2008-08-07
+          title: “Cool project, what CMS did you guys use?”
+          url: https://sunlightfoundation.com/2008/08/07/cool-project-what-cms-did-you-guys-use/
+        - category: sunlight
+          date: 2008-11-06
+          title: Open Letter to the Obama Administration on How to Shine Sunlight
+          url: https://sunlightfoundation.com/2008/11/06/open-letter-to-the-obama-administration-on-how-to-shine-sunlight/
+        - category: sunlight
+          date: 2008-12-18
+          title: "Feed A Need: Donate Time to Sunlight for the Holidays"
+          url: https://sunlightfoundation.com/2008/12/18/feed_a_need/
+        - category: personal
+          date: 2008-04-08
+          title: Rochester BarCamp 3
+          url: /posts/rochester-barcamp-3/
+        - category: personal
+          date: 2008-07-08
+          title: Reflections On Four Years
+          url: /posts/four-years/
+    2007:
+        - category: sunlight
+          date: 2007-12-10
+          title: polipoly – A tool for dealing with district boundary polygons
+          url: https://sunlightfoundation.com/2007/12/10/polipoly/
+        - category: personal
+          date: 2007-11-07
+          title: My Tools (2007)
+          url: /posts/2007-tools-post/

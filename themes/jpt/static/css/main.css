@@ -50,10 +50,9 @@ a:hover {
 
 /* index.html */
 .background {
-    background: url('/img/spacecolony-masked.jpg') no-repeat center center;
+    background: url('/img/spacecolony-masked.jpg') no-repeat top center;
     background-size: cover;
     width: 100%;
-    height: calc(100% - 100px);     /* menu + footer = 100px */
     display: table;
 }
 .banner {
@@ -186,4 +185,52 @@ code {
         font-size: 1.2em;
         margin-top: 2em;
     }
+}
+
+
+/* linkblog */
+.timeline {
+    background-color: white;
+}
+
+.month {
+  padding: 1em 0em 1em 1em;
+}
+
+.logo {
+  background: url(https://raw.githubusercontent.com/sunlightlabs/logos/master/sunlightfoundation/icon/sunlight-foundation_icon_200.png);
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  background-size: 30px 30px;
+  text-indent: -9999px;
+  vertical-align: middle;
+}
+
+.month:nth-of-type(2) {
+  background: #ccc;
+}
+
+.month h3 {
+  font-size: 140%;
+}
+
+.entry {
+  margin: 1em 4em;
+}
+
+.entry .date {
+  float: right;
+  font-size: 90%;
+}
+
+.entry a {
+  vertical-align: middle;
+  font-size: 120%;
+  color: black;
+  text-decoration: underline;
+}
+
+.entry a:hover {
+  text-decoration: none;
 }
