@@ -18,7 +18,7 @@
       <h3>{{$year}}</h3>
         {{ range sort (index $.Site.Data.links.links $year) "date" "desc" }}
         <div class="entry">
-          <span class="logo {{.category}}">{{.category}}</span>
+          <span class="logo logo-{{.category}}">{{.category}}</span>
           <a href="{{.url}}">{{ .title }}</a>
           <span class="date">{{ .date }}</span>
         </div>
