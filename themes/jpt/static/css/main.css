@@ -84,7 +84,22 @@ a:hover {
 .bio a {
     color: white;
 }
+ul.social {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding-left: 0;
+}
+ul.social li {
+    text-align:  center;
+    list-style: none;
+    width: 33%;
+    font-size: 200%
+}
 .projects {
+    padding-top: 1em;
     color: white;
 }
 .projects a {
