@@ -50,7 +50,7 @@ a:hover {
 
 /* index.html */
 .background {
-    background: url('/img/spacecolony.jpg') no-repeat top center;
+    background: url('/img/spacecolony-masked.jpg') no-repeat top center;
     background-size: cover;
     width: 100%;
     display: table;
@@ -84,6 +84,26 @@ a:hover {
 .bio a {
     color: white;
 }
+.projects {
+    color: white;
+}
+.projects a {
+    color: white;
+}
+.projects ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding-left: 0;
+}
+.projects ul li {
+    text-align:  center;
+    list-style: none;
+    width: 50%;
+    padding-bottom: 1em;
+}
 
 /* post template */
 .nobackground {
@@ -104,7 +124,7 @@ a:hover {
 }
 .post-body {
     line-height: 1.5;
-    /* for small screens - overrides at 700px */
+    /* for small screens - overrides at 760px */
     font-size: 1em;
     margin-top: 1em;
 }
@@ -138,25 +158,6 @@ code {
     font-size: 1.2em;
 }
 
-/* media query for screens over 700px */
-@media screen and (min-width: 700px) {
-    .bio {
-        font-size: 1.2em;
-    }
-    .post {
-        margin: 5% auto;
-        width: 700px;
-    }
-    .post-body {
-        font-size: 1.2em;
-        margin-top: 2em;
-    }
-    .timeline {
-        margin: 0 auto;
-        width: 700px;
-    }
-}
-
 
 /* linkblog */
 .timeline {
@@ -173,12 +174,18 @@ code {
   text-indent: -9999px;
   vertical-align: middle;
 }
+.logo-big {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  background-size: 30px 30px;
+  text-indent: -9999px;
+  vertical-align: middle;
+}
 .logo-sunlight {
-  rackground-image: url(/img/icons/sunlight.png);
   background-image: url(/img/icons/sun4.svg);
 }
 .logo-openstates {
-  rackground-image: url(/img/icons/openstates.png);
   background-image: url(/img/icons/interstate.svg);
 }
 .logo-interview {
@@ -193,11 +200,34 @@ code {
 .logo-presentation {
   background-image: url(/img/icons/presentation.svg);
 }
+.logo-white-openstates { 
+  background-image: url(/img/icons/white-openstates.svg);
+}
+.logo-white-scraper { 
+  background-image: url(/img/icons/white-scraper.svg);
+}
+.logo-white-validictory { 
+  background-image: url(/img/icons/white-graduation.svg);
+}
+.logo-white-ballot { 
+  background-image: url(/img/icons/white-ballot.svg);
+}
+.logo-white-honeypot { 
+  background-image: url(/img/icons/white-honeypot.svg);
+}
+.logo-white-markup { 
+  background-image: url(/img/icons/white-markup.svg);
+}
+.logo-white-jellyfish { 
+  background-image: url(/img/icons/white-jellyfish.svg);
+}
+
 
 .entry {
-  margin: 1em 4em;
+  margin: 1em 1em;
 }
 .entry .date {
+  display: none;  /* overriden at 760 */
   float: right;
   font-size: 90%;
 }
@@ -209,4 +239,34 @@ code {
 }
 .entry a:hover {
   text-decoration: none;
+}
+
+/* media query for screens over 760px */
+@media screen and (min-width: 760px) {
+    .bio {
+        font-size: 1.2em;
+    }
+    .post {
+        margin: 5% auto;
+        width: 700px;
+    }
+    .post-body {
+        font-size: 1.2em;
+        margin-top: 2em;
+    }
+    .timeline {
+        margin: 0 auto;
+        width: 700px;
+    }
+    .projects ul li {
+        width: 25%;
+    }
+    .entry {
+      margin: 1em 3em;
+    }
+    .entry .date {
+      display: inline;
+      float: right;
+      font-size: 90%;
+    }
 }
