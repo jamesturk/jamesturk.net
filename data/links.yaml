@@ -48,6 +48,10 @@ links:
           date: 2015-02-19
           title: Technically.DC Interview
           url: https://technical.ly/dc/2015/02/19/how-i-work-sunlight-labs-james-turk/
+        - category: presentation
+          date: 2015-07-11
+          title: Django Built a Nonprofit
+          url: "https://djangobirthday.com/talks/#django-nonprofit"
         - category: writing
           date: 2015-03-26
           title: Deploying Static Sites to CloudFront
@@ -75,6 +79,10 @@ links:
           title: National Day of Civic Hacking 2013
           url: https://sunlightfoundation.com/2013/06/04/national-day-of-civic-hacking-2013/
     2012:
+        - category: presentation
+          date: 2012-08-07
+          title: Open Data, Open States (NCSL Summit 2012)
+          url: http://www.ncsl.org/documents/nalit/OpenData-Turk.pdf
         - category: sunlight
           date: 2012-02-17
           title: Help Open States Rate State Websites
@@ -106,7 +114,7 @@ links:
           url: https://opensource.com/government/11/9/open-states-transparency-state-governments-using-open-data
         - category: presentation
           date: 2011-03-14
-          title: Opening Government With Python
+          title: Opening Government With Python (PyCon 2011)
           url: https://us.pycon.org/2011/schedule/presentations/285/
         - category: sunlight
           date: 2011-01-05
@@ -157,6 +165,10 @@ links:
           url: /posts/that-libyan-dictator/
           title: That Libyan Dictator
     2010:
+        - category: presentation
+          date: 2010-10-06
+          url: https://open.blogs.nytimes.com/2010/09/24/timesopen-2-0-open-government-event/
+          title: "Open States (TimesOpen 2.0: Open Government)"
         - category: sunlight
           date: 2010-03-19
           title: Announcing Our Google Summer of Code 2010 Participation
