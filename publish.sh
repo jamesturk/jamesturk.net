@@ -1,3 +1,4 @@
+AWS_DEFAULT_PROFILE=james
 rm -rf public/ &&
 hugo &&
 s3cmd -c ~/.s3cfg sync -MP public/ s3://jamesturk.net &&
