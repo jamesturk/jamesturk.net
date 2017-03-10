@@ -44,11 +44,11 @@ links:
           date: 2015-02-19
           title: Technically.DC Interview
           url: https://technical.ly/dc/2015/02/19/how-i-work-sunlight-labs-james-turk/
-        - category: personal
+        - category: writing
           date: 2015-03-26
           title: Deploying Static Sites to CloudFront
           url: /posts/deploying-hugo-to-cloudfront/
-        - category: personal
+        - category: writing
           date: 2015-07-13
           title: Eight Years
           url: /posts/eight-years/
@@ -144,11 +144,11 @@ links:
           date: 2011-10-28
           title: Open States Source Visualized
           url: https://sunlightfoundation.com/2011/10/28/openstates-source-visualized/
-        - category: personal
+        - category: writing
           date: 2011-02-24
           title: Today in History
           url: /posts/today-in-history/
-        - category: personal
+        - category: writing
           date: 2011-03-11
           url: /posts/that-libyan-dictator/
           title: That Libyan Dictator
@@ -243,11 +243,11 @@ links:
           date: 2008-12-18
           title: "Feed A Need: Donate Time to Sunlight for the Holidays"
           url: https://sunlightfoundation.com/2008/12/18/feed_a_need/
-        - category: personal
+        - category: writing
           date: 2008-04-08
           title: Rochester BarCamp 3
           url: /posts/rochester-barcamp-3/
-        - category: personal
+        - category: writing
           date: 2008-07-08
           title: Reflections On Four Years
           url: /posts/four-years/
@@ -256,7 +256,7 @@ links:
           date: 2007-12-10
           title: polipoly – A tool for dealing with district boundary polygons
           url: https://sunlightfoundation.com/2007/12/10/polipoly/
-        - category: personal
+        - category: writing
           date: 2007-11-07
           title: My Tools (2007)
           url: /posts/2007-tools-post/

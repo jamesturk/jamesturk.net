@@ -50,7 +50,7 @@ a:hover {
 
 /* index.html */
 .background {
-    background: url('/img/spacecolony-masked.jpg') no-repeat top center;
+    background: url('/img/spacecolony.jpg') no-repeat top center;
     background-size: cover;
     width: 100%;
     display: table;
@@ -61,6 +61,7 @@ a:hover {
     margin-top: 3em;
     margin-bottom: 1em;
     display: table;
+    text-shadow: 0 1px 1px black;
 }
 .banner-head {
     display: table-cell;
@@ -74,49 +75,14 @@ a:hover {
 .bio {
     margin: 0 20%;
     text-align:  center;
-    color: white;
+    color: #fff;
     line-height: 1.5;
     font-size: 1em;
     font-weight: 500;
+    text-shadow: 0 1px 1px black;
 }
 .bio a {
     color: white;
-}
-.front-section {
-    margin: 1em 1em 2em 1em;
-    background-color: rgba(32,36,48,0.9);
-    color: white;
-    text-align: center;
-    font-size: 1.1em;
-}
-.front-section h2 {
-    font-size: 1.4em;
-    font-weight: 400;
-    text-shadow: 0 1px 1px black;
-    padding: 0.4em 0;
-    margin-bottom: 0;
-}
-.front-section ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    font-family: 'Raleway', sans-serif;
-}
-.front-section li {
-    padding: 0.8em 1em;
-    border-top: 1px solid #333;
-    text-shadow: 0 1px 1px black;
-    display: block;
-}
-.front-section li a {
-    color: white;
-}
-.front-post { 
-    text-align: left;
-}
-.front-meta {
-    float: right;
-    color: #777;
 }
 
 /* post template */
@@ -185,55 +151,62 @@ code {
         font-size: 1.2em;
         margin-top: 2em;
     }
+    .timeline {
+        margin: 0 auto;
+        width: 700px;
+    }
 }
 
 
 /* linkblog */
 .timeline {
     background-color: white;
-}
-
-.month {
-  padding: 1em 0em 1em 1em;
+    padding: 1em 10%;
+    max-width: 800px;
 }
 
 .logo {
   display: inline-block;
-  height: 25px;
-  width: 25px;
-  background-size: 25px 25px;
+  height: 20px;
+  width: 20px;
+  background-size: 20px 20px;
   text-indent: -9999px;
   vertical-align: middle;
 }
-
 .logo-sunlight {
-  background-image: url(/img/icons/sunlight.png);
+  rackground-image: url(/img/icons/sunlight.png);
+  background-image: url(/img/icons/sun4.svg);
 }
-
-.month:nth-of-type(2) {
-  background: #ccc;
+.logo-openstates {
+  rackground-image: url(/img/icons/openstates.png);
+  background-image: url(/img/icons/interstate.svg);
 }
-
-.month h3 {
-  font-size: 140%;
+.logo-interview {
+  background-image: url(/img/icons/interview.svg);
+}
+.logo-writing {
+  background-image: url(/img/icons/writing.svg);
+}
+.logo-elsewhere {
+  background-image: url(/img/icons/link4.svg);
+}
+.logo-presentation {
+  background-image: url(/img/icons/presentation.svg);
 }
 
 .entry {
   margin: 1em 4em;
 }
-
 .entry .date {
   float: right;
   font-size: 90%;
 }
-
 .entry a {
   vertical-align: middle;
   font-size: 120%;
   color: black;
   text-decoration: underline;
 }
-
 .entry a:hover {
   text-decoration: none;
 }
