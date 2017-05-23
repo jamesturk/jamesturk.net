@@ -256,6 +256,25 @@ code {
   text-decoration: none;
 }
 
+/* social bar */
+.socialbar ul {
+    list-style-type: none;
+    display: flex;
+    padding-left: 1em;
+}
+.socialbar ul li {
+    list-style: none;
+    padding-left: 2em;
+    color: white;
+}
+.socialbar ul li a {
+    color: white;
+    text-decoration: none;
+}
+.socialbar ul li a:hover {
+    text-decoration: underline;
+}
+
 /* media query for screens over 760px */
 @media screen and (min-width: 760px) {
     .bio {
