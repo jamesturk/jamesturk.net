@@ -3,20 +3,28 @@ years: [2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010, 2009, 2008, 2007]
 links:
     2017:
         - category: openstates
+          date: 2017-12-21
+          title: Introducing the Open States GraphQL API
+          url: https://blog.openstates.org/introducing-the-upcoming-open-states-graphql-api-838f9d023868
+        - category: openstates
+          date: 2017-12-11
+          title: Open States in 2018 and Beyond
+          url: https://blog.openstates.org/open-states-in-2018-and-beyond-d35f1717982b
+        - category: openstates
+          date: 2017-08-21
+          title: Open States Data Availability Survey
+          url: https://blog.openstates.org/open-states-data-availability-survey-942ceba26fb0
+        - category: openstates
           date: 2017-07-21
           title: 2017 So Far
-          url: https://blog.openstates.org/post/2017-so-far/
+          url: https://blog.openstates.org/2017-so-far-a4847249ac4
         - category: openstates
           date: 2017-02-27
-          url: https://blog.openstates.org/post/gsoc-2017/
+          url: https://blog.openstates.org/open-states-google-summer-of-code-2017-e8f3895a9a81
           title: "Open States & Google Summer of Code 2017"
         - category: openstates
-          date: 2017-02-16
-          url: https://blog.openstates.org/post/march-2017-dc-code-sprint/
-          title: "Save the Date: Open States Code Sprint - March 19th"
-        - category: openstates
           date: 2017-01-31
-          url: https://blog.openstates.org/post/whats-next-2017/
+          url: https://blog.openstates.org/whats-next-in-2017-5932ff0baa5d
           title: "What's Next in 2017?"
     2016:
         - category: openstates
