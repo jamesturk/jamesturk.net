@@ -2,6 +2,10 @@
 years: [2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010, 2009, 2008, 2007]
 links:
     2018:
+        - category: writing
+          date: 2018-05-03
+          title: Reclaiming Time with Twitter-as-RSS
+          url: https://medium.com/@jamesturk/reclaiming-time-with-twitter-as-rss-202073a39f0a
         - category: openstates
           date: 2018-02-12
           title: Open States & Google Summer of Code 2018
