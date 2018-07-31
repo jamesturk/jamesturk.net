@@ -14,5 +14,4 @@ Each of them was sort of interesting to me in a terribly embarassing to read/nav
 * [the very first presentation I gave on what has become my job for the past 8 years](/posts/rochester-barcamp-3/)
 * [wrapping up school](/posts/four-years/) 
 * [an arbitrary reflection on February 24th](/posts/today-in-history/)
-* [a not-so-topical Chrome extension](/posts/that-libyan-dictator/)
 
