@@ -2,6 +2,10 @@
 years: [2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010, 2009, 2008, 2007]
 links:
     2018:
+        - category: openstates
+          date: 2018-10-19
+          title: New Directions for Open States
+          url: https://blog.openstates.org/new-directions-716cab38c357
         - category: writing
           date: 2018-05-03
           title: Reclaiming Time with Twitter-as-RSS
