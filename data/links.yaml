@@ -1,7 +1,11 @@
 ---
-years: [2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010, 2009, 2008, 2007]
+years: ['2018', '2017', '2016', '2015', '2014', '2013', '2012', '2011', '2010', '2009', '2008', '2007']
 links:
     2018:
+        - category: openstates
+          date: 2018-11-05
+          title: More Ways to Get State Legislative Data
+          url: https://blog.openstates.org/more-ways-to-get-state-legislative-data-d9aece2245f0
         - category: openstates
           date: 2018-10-19
           title: New Directions for Open States
