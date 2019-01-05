@@ -1,6 +1,11 @@
 ---
-years: ['2018', '2017', '2016', '2015', '2014', '2013', '2012', '2011', '2010', '2009', '2008', '2007']
+years: ['2019', '2018', '2017', '2016', '2015', '2014', '2013', '2012', '2011', '2010', '2009', '2008', '2007']
 links:
+    2019:
+        - category: openstates
+          date: 2019-01-03
+          title: 2019 Session Updates
+          url: https://blog.openstates.org/2019-session-updates-f4a6244e9755
     2018:
         - category: openstates
           date: 2018-11-05
