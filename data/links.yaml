@@ -3,6 +3,10 @@ years: ['2019', '2018', '2017', '2016', '2015', '2014', '2013', '2012', '2011', 
 links:
     2019:
         - category: openstates
+          date: 2019-01-10
+          title: Introducing the New openstates.org
+          url: https://blog.openstates.org/introducing-the-new-openstates-org-64bcbd765f58
+        - category: openstates
           date: 2019-01-03
           title: 2019 Session Updates
           url: https://blog.openstates.org/2019-session-updates-f4a6244e9755
@@ -116,7 +120,7 @@ links:
         - category: presentation
           date: 2012-08-07
           title: Open Data, Open States (NCSL Summit 2012)
-          url: http://www.ncsl.org/documents/nalit/OpenData-Turk.pdf
+          url: https://www.ncsl.org/documents/nalit/OpenData-Turk.pdf
         - category: sunlight
           date: 2012-02-17
           title: Help Open States Rate State Websites
