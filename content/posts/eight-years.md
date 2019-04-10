@@ -40,4 +40,4 @@ So in June when it became clear to me that it was time to move on, I did so with
 
 And to all of you that made Sunlight such a wonderful eight years &mdash; coworkers, collaborators, peers, users, friends &mdash; thank you.
 
-And please, [stay in touch.](mailto:james.p.turk@gmail.com)
+And please, [stay in touch.](mailto:contact@jamesturk.net)
