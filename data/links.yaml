@@ -3,6 +3,10 @@ years: ['2019', '2018', '2017', '2016', '2015', '2014', '2013', '2012', '2011', 
 links:
     2019:
         - category: openstates
+          date: 2019-09-09
+          title: Adding Full Text Search to Open States
+          url: https://blog.openstates.org/adding-full-text-search-to-open-states-14b665c1fe30
+        - category: openstates
           date: 2019-01-10
           title: Introducing the New openstates.org
           url: https://blog.openstates.org/introducing-the-new-openstates-org-64bcbd765f58
