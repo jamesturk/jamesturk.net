@@ -3,6 +3,10 @@ years: ['2019', '2018', '2017', '2016', '2015', '2014', '2013', '2012', '2011', 
 links:
     2019:
         - category: openstates
+          date: 2019-11-18
+          title: National Science Foundation Funding!
+          url: https://blog.openstates.org/openstates-nsf-funding/
+        - category: openstates
           date: 2019-09-09
           title: Adding Full Text Search to Open States
           url: https://blog.openstates.org/adding-full-text-search-to-open-states-14b665c1fe30
