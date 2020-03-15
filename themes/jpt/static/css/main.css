@@ -143,6 +143,9 @@ ul.social li {
     font-size: 1em;
     margin-top: 1em;
 }
+.post-body img {
+  width: 100%;
+}
 .post-meta {
     color: #777;
     float: right;
