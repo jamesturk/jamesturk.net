@@ -3,6 +3,10 @@ years: ['2020', '2019', '2018', '2017', '2016', '2015', '2014', '2013', '2012', 
 links:
     2020:
         - category: openstates
+          date: 2020-04-20
+          title: April 2020 Open States Update
+          url: https://blog.openstates.org/april-2020-update/
+        - category: openstates
           date: 2020-02-25
           title: Tracking Legislation on OpenStates.org
           url: https://blog.openstates.org/tracking-legislation-on-open-states/
