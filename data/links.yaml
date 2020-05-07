@@ -99,10 +99,6 @@ links:
           date: 2015-02-04
           title: "#Hack4Congress Boston: Making our lawmakers more responsive to the public"
           url: https://sunlightfoundation.com/2015/02/04/hack4congress-boston/
-        - category: sunlight
-          date: 2015-04-07
-          title: Join Sunlight at PyCon 2015
-          url: https://sunlightfoundation.com/2015/04/07/join-us-at-pycon-2015/
         - category: interview
           date: 2015-02-19
           title: Technically.DC Interview
@@ -154,10 +150,6 @@ links:
           date: 2012-07-27
           title: A New Face For Open States
           url: https://blog.openstates.org/a-new-face/
-        - category: sunlight
-          date: 2012-02-11
-          title: New Districts in Sunlight Congress API
-          url: https://sunlightfoundation.com/2012/11/02/new-districts-in-sunlight-congress-api/
         - category: elsewhere
           date: 2012-03-13
           title: "Open States project achieves grand milestone"
@@ -171,10 +163,6 @@ links:
           date: 2011-03-14
           title: Opening Government With Python (PyCon 2011)
           url: https://us.pycon.org/2011/schedule/presentations/285/
-        - category: sunlight
-          date: 2011-01-05
-          title: 112th Congress live in Congress API
-          url: https://sunlightfoundation.com/2011/01/05/112th-congress-in-congress-api/
         - category: openstates
           date: 2011-02-03
           title: New Hampshire Opens Its Legislative Data
@@ -224,14 +212,6 @@ links:
           date: 2010-09-01
           title: Introducing the Open State Project API
           url: https://blog.openstates.org/introducing-the-openstates-api/
-        - category: sunlight
-          date: 2010-10-13
-          title: Celebrating 100 GitHub Projects
-          url: https://sunlightfoundation.com/2010/10/13/celebrating-100-github-projects/
-        - category: sunlight
-          date: 2010-12-10
-          title: Sunlight Congress API & The 112th Congress
-          url: https://sunlightfoundation.com/2010/12/10/congress-api-112-congress/
     2009:
         - category: sunlight
           date: 2009-01-08
@@ -249,10 +229,6 @@ links:
           date: 2009-04-21
           title: Announcing Our Summer of Code 2009 Participants
           url: https://sunlightfoundation.com/2009/04/21/gsoc-2009-participants/
-        - category: sunlight
-          date: 2009-09-15
-          title: ThisWeKnow Gets Praise in Senate
-          url: https://sunlightfoundation.com/2009/09/15/thisweknow-senate/
         - category: sunlight
           date: 2009-09-24
           title: Sunlight Labs API One Year Later
@@ -274,10 +250,6 @@ links:
           date: 2008-11-06
           title: Open Letter to the Obama Administration [...]
           url: https://sunlightfoundation.com/2008/11/06/open-letter-to-the-obama-administration-on-how-to-shine-sunlight/
-        - category: sunlight
-          date: 2008-12-18
-          title: "Feed A Need: Donate Time to Sunlight for the Holidays"
-          url: https://sunlightfoundation.com/2008/12/18/feed_a_need/
         - category: writing
           date: 2008-04-08
           title: Rochester BarCamp 3
