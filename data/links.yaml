@@ -80,20 +80,16 @@ links:
     2016:
         - category: openstates
           date: 2016-11-01
-          url: https://blog.openstates.org/post/adopting-open-states/
+          url: https://blog.openstates.org/adopting-open-states-e837741e97da/
           title: Adopting Open States
         - category: openstates
           date: 2016-12-08
-          url: https://blog.openstates.org/post/our-first-month/
+          url: https://blog.openstates.org/our-first-month-aadd98a8e285/
           title: Our First Month
         - category: openstates
           date: 2016-11-03
-          url: https://blog.openstates.org/post/why-open-states-matters/
+          url: https://blog.openstates.org/why-open-states-10caed7874c6/
           title: Why Open States?
-        - category: sunlight
-          date: 2016-11-01
-          title: "Nonprofits step up to preserve tools for transparency"
-          url: https://sunlightfoundation.com/2016/11/01/sunlight-labs-update-nonprofits-step-up-to-preserve-tools-for-transparency/
         - category: elsewhere
           date: 2016-11-16
           title: Why keep Open States going?
@@ -133,10 +129,10 @@ links:
           title: How we’re updating Sunlight’s legislative APIs for 2015
           url: https://sunlightfoundation.com/2014/12/01/how-were-updating-sunlights-legislative-apis-for-2015/
     2013:
-        - category: sunlight
+        - category: openstates
           date: 2013-03-11
           title: "Open States: Transparency Report Card"
-          url: https://sunlightfoundation.com/2013/03/11/openstates-report-card/
+          url: https://blog.openstates.org/2013-transparency-report-card/
         - category: sunlight
           date: 2013-06-04
           title: National Day of Civic Hacking 2013
@@ -146,14 +142,10 @@ links:
           date: 2012-08-07
           title: Open Data, Open States (NCSL Summit 2012)
           url: https://www.ncsl.org/documents/nalit/OpenData-Turk.pdf
-        - category: sunlight
-          date: 2012-02-17
-          title: Help Open States Rate State Websites
-          url: https://sunlightfoundation.com/2012/02/17/help-open-states-rate-state-websites/
-        - category: sunlight
+        - category: openstates
           date: 2012-03-12
           title: "Open States: 50!"
-          url: https://sunlightfoundation.com/2012/03/12/open-states-50/
+          url: https://blog.openstates.org/openstates-50/
         - category: sunlight
           date: 2012-07-12
           title: What Redistricting Means For Sunlight’s APIs
@@ -184,14 +176,6 @@ links:
           title: 112th Congress live in Congress API
           url: https://sunlightfoundation.com/2011/01/05/112th-congress-in-congress-api/
         - category: sunlight
-          date: 2011-01-14
-          title: "We Have a Winner: Contributor Raffle Update"
-          url: https://sunlightfoundation.com/2011/01/14/we-have-a-winner-raffle/
-        - category: sunlight
-          date: 2011-01-21
-          title: "Sunlight Labs Virtual Office Hours: Jan 28 @ 3pm"
-          url: https://sunlightfoundation.com/2011/01/21/virtual-office-hours-jan-28/
-        - category: sunlight
           date: 2011-02-03
           title: New Hampshire Opens Its Legislative Data
           url: https://sunlightfoundation.com/2011/02/03/new-hampshire-open-legislative-data/
@@ -203,14 +187,14 @@ links:
           date: 2011-03-21
           title: Sunlight Labs & Google Summer of Code 2011
           url: https://sunlightfoundation.com/2011/03/21/sunlightlabs-gsoc2011-accepted/
-        - category: sunlight
+        - category: openstates
           date: 2011-05-06
           title: Open States Reaches Halfway Mark
-          url: https://sunlightfoundation.com/2011/05/06/open-states-halfway/
-        - category: sunlight
+          url: https://blog.openstates.org/halfway/
+        - category: openstates
           date: 2011-09-12
           title: "Open States API: One Year Later"
-          url: https://sunlightfoundation.com/2011/09/12/open-states-api-1-yr-later/
+          url: https://blog.openstates.org/api-1-year-later/
         - category: sunlight
           date: 2011-09-26
           title: "Labs Olympics 2011: How Is Babby?"
@@ -236,10 +220,10 @@ links:
           date: 2010-04-28
           title: Summer of Code 2010 Participants
           url: https://sunlightfoundation.com/2010/04/28/summer-code-2010-participants/
-        - category: sunlight
+        - category: openstates
           date: 2010-05-10
           title: "Fifty State Project: Redux"
-          url: https://sunlightfoundation.com/2010/05/10/fifty-state-project-redux/
+          url: https://blog.openstates.org/fifty-state-project-redux/
         - category: sunlight
           date: 2010-08-12
           title: Sunlight Labs Community Survey
@@ -248,10 +232,10 @@ links:
           date: 2010-08-30
           title: "Google Summer of Code: Open State Project"
           url: https://sunlightfoundation.com/2010/08/30/gsoc-2010-openstates/
-        - category: sunlight
+        - category: openstates
           date: 2010-09-01
           title: Introducing the Open State Project API
-          url: https://sunlightfoundation.com/2010/09/01/introducing-open-state-project-api/
+          url: https://blog.openstates.org/introducing-the-openstates-api/
         - category: sunlight
           date: 2010-10-13
           title: Celebrating 100 GitHub Projects
@@ -277,10 +261,10 @@ links:
           date: 2009-02-17
           title: "Open Government Hackathon: Chicago, March 29-31"
           url: https://sunlightfoundation.com/2009/02/17/open-government-hackathon-chicago/
-        - category: sunlight
+        - category: openstates
           date: 2009-04-10
           title: "Fifty States Project: April 10th Status Report"
-          url: https://sunlightfoundation.com/2009/04/10/fifty-states-project-april-10th-status-report/
+          url: https://blog.openstates.org/april-2009/
         - category: sunlight
           date: 2009-04-21
           title: Announcing Our Summer of Code 2009 Participants
@@ -293,10 +277,6 @@ links:
           date: 2009-09-24
           title: Sunlight Labs API One Year Later
           url: https://sunlightfoundation.com/2009/09/24/sunlight-labs-api-one-year-later/
-        - category: sunlight
-          date: 2009-10-01
-          title: Take 5 Minutes to Help the Fifty State Project
-          url: https://sunlightfoundation.com/2009/10/01/5-mins-fifty-state-project/
         - category: sunlight
           date: 2009-10-27
           title: Recovery.gov Augmented Reality Mashup
