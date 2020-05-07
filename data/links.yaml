@@ -150,10 +150,10 @@ links:
           date: 2012-07-12
           title: What Redistricting Means For Sunlight’s APIs
           url: https://sunlightfoundation.com/2012/07/12/redistricting-2012/
-        - category: sunlight
+        - category: openstates
           date: 2012-07-27
           title: A New Face For Open States
-          url: https://sunlightfoundation.com/2012/07/27/a-new-face-for-openstates/
+          url: https://blog.openstates.org/a-new-face/
         - category: sunlight
           date: 2012-02-11
           title: New Districts in Sunlight Congress API
@@ -175,10 +175,10 @@ links:
           date: 2011-01-05
           title: 112th Congress live in Congress API
           url: https://sunlightfoundation.com/2011/01/05/112th-congress-in-congress-api/
-        - category: sunlight
+        - category: openstates
           date: 2011-02-03
           title: New Hampshire Opens Its Legislative Data
-          url: https://sunlightfoundation.com/2011/02/03/new-hampshire-open-legislative-data/
+          url: https://blog.openstates.org/new-hampshire-open-data/
         - category: sunlight
           date: 2011-03-02
           title: Sunlight @ PyCon 2011
@@ -199,10 +199,6 @@ links:
           date: 2011-09-26
           title: "Labs Olympics 2011: How Is Babby?"
           url: https://sunlightfoundation.com/2011/09/26/how-is-babby/
-        - category: sunlight
-          date: 2011-10-28
-          title: Open States Source Visualized
-          url: https://sunlightfoundation.com/2011/10/28/openstates-source-visualized/
         - category: writing
           date: 2011-02-24
           title: Today in History
@@ -224,14 +220,6 @@ links:
           date: 2010-05-10
           title: "Fifty State Project: Redux"
           url: https://blog.openstates.org/fifty-state-project-redux/
-        - category: sunlight
-          date: 2010-08-12
-          title: Sunlight Labs Community Survey
-          url: https://sunlightfoundation.com/2010/08/12/community-survey/
-        - category: sunlight
-          date: 2010-08-30
-          title: "Google Summer of Code: Open State Project"
-          url: https://sunlightfoundation.com/2010/08/30/gsoc-2010-openstates/
         - category: openstates
           date: 2010-09-01
           title: Introducing the Open State Project API
@@ -241,10 +229,6 @@ links:
           title: Celebrating 100 GitHub Projects
           url: https://sunlightfoundation.com/2010/10/13/celebrating-100-github-projects/
         - category: sunlight
-          date: 2010-12-06
-          title: "Reminder: Submit a Patch, Win a Kindle"
-          url: https://sunlightfoundation.com/2010/12/06/reminder-open-source-contest/
-        - category: sunlight
           date: 2010-12-10
           title: Sunlight Congress API & The 112th Congress
           url: https://sunlightfoundation.com/2010/12/10/congress-api-112-congress/
@@ -253,10 +237,6 @@ links:
           date: 2009-01-08
           title: Looking At The NYTimes Congress API
           url: https://sunlightfoundation.com/2009/01/08/nytimes-congress-api/
-        - category: sunlight
-          date: 2009-02-02
-          title: Taking a look at the GOP Anywhere API
-          url: https://sunlightfoundation.com/2009/02/02/gop-anywhere-api/
         - category: sunlight
           date: 2009-02-17
           title: "Open Government Hackathon: Chicago, March 29-31"
