@@ -171,10 +171,6 @@ links:
           date: 2011-03-02
           title: Sunlight @ PyCon 2011
           url: https://sunlightfoundation.com/2011/03/02/sunlight-pycon-2011/
-        - category: sunlight
-          date: 2011-03-21
-          title: Sunlight Labs & Google Summer of Code 2011
-          url: https://sunlightfoundation.com/2011/03/21/sunlightlabs-gsoc2011-accepted/
         - category: openstates
           date: 2011-05-06
           title: Open States Reaches Halfway Mark
@@ -225,10 +221,6 @@ links:
           date: 2009-04-10
           title: "Fifty States Project: April 10th Status Report"
           url: https://blog.openstates.org/april-2009/
-        - category: sunlight
-          date: 2009-04-21
-          title: Announcing Our Summer of Code 2009 Participants
-          url: https://sunlightfoundation.com/2009/04/21/gsoc-2009-participants/
         - category: sunlight
           date: 2009-09-24
           title: Sunlight Labs API One Year Later
