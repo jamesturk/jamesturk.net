@@ -152,6 +152,11 @@ ul.social li {
     float: right;
     clear: both;
 }
+.post-footer {
+  border-top: 1px solid #999;
+  margin-top: 3rem;
+  padding-top: 1rem;
+}
 .clear {
     clear: both;
 }
