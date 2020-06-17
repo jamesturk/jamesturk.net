@@ -25,7 +25,7 @@ If you're using Postgres and haven't used its full text search functionality, yo
 
 For example, [Open States](https://openstates.org) allows users to search across hundreds of thousands of pieces of state legislation.  We used to depend upon Elasticsearch, and so had additional servers, processes to keep data in sync between the two data stores, and a whole host of complex issues related to that setup.  In the past few months all of that has been replaced with a little bit of code that populates a tsquery field in Postgres, not only is the complexity much lower, the response time is much faster and the results are just as good.  (Elasticsearch is still a great product, but was overkill for our relatively straightforward needs.)
 
-Without going into a full dissertation on how FTS works, it is useful to understand that Postgres' full text search works by converting text to a ``tsvector``, essentially a weighted list of keywords from a document.   When querying, the search query itself it converted to a ``tsquery``.
+Without going into a full dissertation on how FTS works, it is useful to understand that Postgres' full text search works by converting text to a ``tsvector``, essentially a weighted list of keywords from a document.   When querying, the search query itself is converted to a ``tsquery``.
 
 The example of doing this in SQL directly looks like this:
 
@@ -33,13 +33,15 @@ The example of doing this in SQL directly looks like this:
 
 The argument to `to_tsquery` can use certain symbols like `&` and `*`, as well as ways to only search within certain parts of the tsvector.  (See [to_tsquery docs](https://www.postgresql.org/docs/12/textsearch-controls.html#TEXTSEARCH-PARSING-QUERIES).)
 
+You'll notice that this syntax is pretty specific to `to_tsquery` and not how a user would typically assume a search field on a website would work.  We'll come back to that in a minute.
+
 ## Django & Postgres Full Text Search
 
 Basic full text search support was added way back in Django 1.10.  The [Django Postgres Full Text Search Docs](https://docs.djangoproject.com/en/3.0/ref/contrib/postgres/search/) do a pretty good job, you'll see that it presents an interface that contains `SearchQuery` and `SearchVector` that can be used to interface with the underlying `tsquery` and `tsvector`.
 
 If you want basic keyword search, or to handle custom search queries you craft in the ORM, that'll take you pretty far.
 
-But if you take a look at the example on that page, you'll see that there's no difference in results between `SearchQuery('red tomato')` and `SearchQuery('tomato red')`.  Both evaluate to the same underlying `tsquery` object since  `to_tsquery` interprets spaces as an 'or'.
+But if you take a look at the example on that page, you'll see that there's no difference in results between `SearchQuery('red tomato')` and `SearchQuery('tomato red')`.  Both evaluate to the same underlying `tsquery` object since  `to_tsquery` interprets spaces as an 'or'.  That's that same `tsquery` issue we flagged before.
 
 So if you want to search for phrases you can craft your own miniature parser that handles words like 'and' & 'or', or takes care of quoted strings and uses the `search_type='phrase'` option available since Django 2.2.
 
