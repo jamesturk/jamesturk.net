@@ -12,7 +12,7 @@ It's a [small line in the changelog](https://docs.djangoproject.com/en/dev/relea
     Bill.objects.filter(
       search_vector=SearchQuery(
         "'transportation funding' OR 'transit funding' -highway",
-        search_type="web",
+        search_type="websearch",
         config="english"
       )
     )
