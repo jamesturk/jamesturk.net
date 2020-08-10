@@ -2,6 +2,10 @@
 years: ['2020', '2019', '2018', '2017', '2016', '2015', '2014', '2013', '2012', '2011', '2010', '2009', '2008', '2007']
 links:
     2020:
+        - category: openstates
+          date: 2020-08-10
+          title: August 2020 Open States Update
+          url: https://blog.openstates.org/august-2020-update/
         - category: writing
           date: 2020-06-17
           title: Postgres websearch in Django 3.1
