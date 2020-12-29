@@ -3,6 +3,10 @@ years: ['2020', '2019', '2018', '2017', '2016', '2015', '2014', '2013', '2012', 
 links:
     2020:
         - category: openstates
+          date: 2020-12-29
+          title: December 2020 Open States Update
+          url: https://blog.openstates.org/december-2020/
+        - category: openstates
           date: 2020-11-25
           title: Open States API Updates and 2021 Sessions
           url: https://blog.openstates.org/open-states-api-v3/
