@@ -224,25 +224,28 @@ code {
 .logo-presentation {
   background-image: url(/img/icons/presentation.svg);
 }
-.logo-white-openstates { 
+.logo-white-openstates {
   background-image: url(/img/icons/white-openstates.svg);
 }
-.logo-white-scraper { 
+.logo-white-scraper {
   background-image: url(/img/icons/white-scraper.svg);
 }
-.logo-white-validictory { 
+.logo-white-spatula {
+  background-image: url(/img/icons/white-spatula.svg);
+}
+.logo-white-validictory {
   background-image: url(/img/icons/white-graduation.svg);
 }
-.logo-white-ballot { 
+.logo-white-ballot {
   background-image: url(/img/icons/white-ballot.svg);
 }
-.logo-white-honeypot { 
+.logo-white-honeypot {
   background-image: url(/img/icons/white-honeypot.svg);
 }
-.logo-white-markup { 
+.logo-white-markup {
   background-image: url(/img/icons/white-markup.svg);
 }
-.logo-white-jellyfish { 
+.logo-white-jellyfish {
   background-image: url(/img/icons/white-jellyfish.svg);
 }
 
