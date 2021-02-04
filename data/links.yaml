@@ -1,6 +1,11 @@
 ---
-years: ['2020', '2019', '2018', '2017', '2016', '2015', '2014', '2013', '2012', '2011', '2010', '2009', '2008', '2007']
+years: ['2021', '2020', '2019', '2018', '2017', '2016', '2015', '2014', '2013', '2012', '2011', '2010', '2009', '2008', '2007']
 links:
+    2021:
+        - category: openstates
+          date: 2021-02-04
+          title: Open States Joins Civic Eagle
+          url: https://blog.openstates.org/open-states-joins-civic-eagle/
     2020:
         - category: openstates
           date: 2020-12-29
