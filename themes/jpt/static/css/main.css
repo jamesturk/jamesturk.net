@@ -51,8 +51,9 @@ a:hover {
 
 /* index.html */
 .background {
-    background: url('/img/spacecolony-masked.jpg') no-repeat top center;
+    background: url('/img/city_lights_namerica_8k.jpg') no-repeat top center;
     background-size: cover;
+    background-position: 0 -50px;
     width: 100%;
     display: table;
 }
@@ -289,6 +290,9 @@ code {
 
 /* media query for screens over 760px */
 @media screen and (min-width: 760px) {
+    .background {
+        background-position: 0 -200px;
+    }
     .bio {
         font-size: 1.2em;
     }
