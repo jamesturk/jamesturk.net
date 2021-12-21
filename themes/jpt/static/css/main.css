@@ -53,7 +53,7 @@ a:hover {
 .background {
     background: url('/img/city_lights_namerica_8k.jpg') no-repeat top center;
     background-size: cover;
-    background-position: 0 -50px;
+    background-position: -50px -50px;
     width: 100%;
     display: table;
 }
