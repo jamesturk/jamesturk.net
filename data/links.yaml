@@ -2,8 +2,12 @@
 years: ['2022', '2021', '2020', '2019', '2018', '2017', '2016', '2015', '2014', '2013', '2012', '2011', '2010', '2009', '2008', '2007']
 links:
     2022:
+        - category: writing
+          date: 2022-11-05
+          title: Federated
+          url: /posts/federated/
         - category: openstates
-          date: 2021-02-15
+          date: 2022-02-15
           title: Moving On From Open States
           url: https://blog.openstates.org/james-moving-on/
     2021:
