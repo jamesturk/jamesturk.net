@@ -91,7 +91,7 @@ I'll probably give it a more thorough test in the future once I experiment more 
 
 I didn't think the answer would be yes when I started, but... definitely more than I thought.
 
-As I write this, GPT-4 is in preview and there's only one API method available, not the full range of options.  This makes it more expensive.  $0.09-$0.18 cents per 1000 tokens, depending on the specifics of the request.  That means each requests is costing between a quarter and a dollar based on the pages I've tried.
+As I write this, GPT-4 is in preview and there's only one API method available, not the full range of options.  This makes it more expensive.  It can cost up to $0.36/request right now depending on the specifics of the request.
 
 For a one-off scrape that won't need that many requests, that might not be terrible compared to the time you'd spend building it.
 
