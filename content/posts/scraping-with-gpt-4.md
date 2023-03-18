@@ -79,6 +79,14 @@ And if you change the schema to include some nested fields:
 
 It handles the change perfectly.
 
+## Is It Actually Good?
+
+Anecdotally, yes.
+
+I've run it against some Open States scrapers and it performs very well. Testing gets a bit expensive so I haven't run it against a comprehensive test suite, but I'm impressed so far with what I've tried.
+
+I'll probably give it a more thorough test in the future once I experiment more with cost-saving techniques like cleaning the HTML more before sending it.
+
 ## Is It Practical?
 
 I didn't think the answer would be yes when I started, but... definitely more than I thought.
