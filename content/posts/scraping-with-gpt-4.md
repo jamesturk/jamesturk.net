@@ -128,7 +128,7 @@ Using it looks like:
    ]}
 ```
 
-v0.1 isn't even 100 lines of code, just the above with some quality-of-life features.
+v0.1 isn't even 100 lines of code, just the above with some quality-of-life features.  Feel free to open an issue on GitHub if you have any ideas for improvements.
 
 One that can matter a great deal if you're actually going to use this is to reduce how much HTML you send by using the `xpath_hint` or `css_hint` parameters. These add a preprocessing step that uses the given selector to reduce the HTML sent to the API.  Since you're paying per token, this can be a big deal, or even make scraping a large page possible where it would otherwise exceed the token limit.
 
