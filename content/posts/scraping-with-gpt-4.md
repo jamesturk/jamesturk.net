@@ -59,7 +59,9 @@ I gave it a schema of:
     }
 ```
 
-and it was able to extract information from pages like <https://www.ilga.gov/senate/Senator.asp?GA=103&MemberID=3092>
+and it was able to extract information from pages like <https://www.ilga.gov/senate/Senator.asp?GA=103&MemberID=3092>.
+
+That same schema could then be applied to pages from other states like <https://www.ncleg.gov/Members/Biography/H/339> with no more than a single customization: a CSS selector to limit what portion of the HTML was sent to the API.
 
 And if you change the schema to include some nested fields:
 
@@ -91,7 +93,7 @@ I'll probably give it a more thorough test in the future once I experiment more 
 
 I didn't think the answer would be yes when I started, but... definitely more than I thought.
 
-As I write this, GPT-4 is in preview and there's only one API method available, not the full range of options.  This makes it more expensive.  It can cost up to $0.36/request right now depending on the specifics of the request.
+As I write this, GPT-4 is in preview and there's only one API method available, not the full range of options.  This makes it more expensive.  It can cost up to $0.36/request right now depending on the specifics of the request.  The major factor is the size of the HTML.
 
 For a one-off scrape that won't need that many requests, that might not be terrible compared to the time you'd spend building it.
 
