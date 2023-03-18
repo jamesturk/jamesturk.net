@@ -61,7 +61,7 @@ I gave it a schema of:
 
 and it was able to extract information from pages like <https://www.ilga.gov/senate/Senator.asp?GA=103&MemberID=3092>
 
-I saw the power of this approach when I changed the schema to collect more data:
+And if you change the schema to include some nested fields:
 
 ```python
     schema={
@@ -77,27 +77,28 @@ I saw the power of this approach when I changed the schema to collect more data:
     }
 ```
 
-That single line added the ability to scrape the numerous offices of each legislator.
+It handles the change perfectly.
 
 ## Is It Practical?
 
-I didn't think the answer would be yes when I started, but... more than I thought.
+I didn't think the answer would be yes when I started, but... definitely more than I thought.
 
-Right now, GPT-4 is in preview, and I could only access it via the chat interface at the time of writing.  This makes it more expensive.  $0.09-$0.18 cents per 1000 tokens, depending on the specifics of the request.  That means a single request is costing around a dollar.
+As I write this, GPT-4 is in preview and there's only one API method available, not the full range of options.  This makes it more expensive.  $0.09-$0.18 cents per 1000 tokens, depending on the specifics of the request.  That means each requests is costing between a quarter and a dollar based on the pages I've tried.
 
-For a one-off scrape that won't need that many requests, that isn't terrible.
+For a one-off scrape that won't need that many requests, that might not be terrible compared to the time you'd spend building it.
 
-A note on pricing: Long term it will likely be more reasonable to use the InstructGPT interface, which ranges from $0.02 to $0.0004 per 1000 tokens. If prior trends are any indication, the $0.02 model will soon be a GPT-4 model.
+(A note on pricing: Long term it will likely be more reasonable to use the InstructGPT interface, which ranges from $0.02 to $0.0004 per 1000 tokens. If prior trends are any indication, the $0.02 model will soon be a GPT-4 model.  Pricing will definitely come down as the model matures.)
 
-So if a page is around 8,000 tokens it would cost $0.16 to scrape it.
+For scrapes that are running regularly, a different approach might make more sense depending on the frequency it'll run and other factors.
 
-The biggest limitation I've run into so far is the token limit. GPT-3.5's 4096 tokens is not a lot of HTML.  GPT-4 has a 8192 token limit, which is much better and allowed me to complete the scraper for the Illinois legislators.
+Beyond cost, the other big limitation is the token limit. GPT-3.5's 4096 tokens is not a lot of HTML and I frequently ran into issues with it.  GPT-4 has a 8192 token limit, which is much better and allowed me to complete the scraper for the Illinois legislators without any tricks.
 
-There is an announced-but-currently-unavailable 32k token limit version of GPT-4, which would be ideal for this task.
+It's worth noting, longer pages (such as the full list of legislators) are too big.
+There is an announced-but-currently-unavailable 32k token limit version of GPT-4, which would be ideal for larger pages, once I have access to that I'll be revisiting this with some other ideas I want to try.
 
 ## scrapeghost
 
-I decided to take what I had above and make it into a little proof-of-concept module that can be used to actually scrape sites.
+If this is interesting to you, I decided to take what I had above and make it into a little proof-of-concept module that can be used to actually scrape sites.
 
 If you have your own OpenAI API key, you can play with what I have working here: <https://github.com/jamesturk/scrapeghost/>
 
