@@ -173,4 +173,4 @@ Depending on the way the data is on the page (e.g. some state sites have a JSON 
 
 ### What about pages with a lot of data?
 
-If the hint approach is not good enough, the 32k token limit should be enough to scrape a lot of data.
+If the hint approach is not good enough, the 32k token limit should be enough to scrape a lot of data once it is available.
