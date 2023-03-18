@@ -115,17 +115,27 @@ Using it looks like:
         "district": "string",
         "party": "string",
         "photo_url": "url",
-        "offices": [{"name": "string", "address": "string", "phone": "string"}],
+        "offices": [{
+            "name": "string", 
+            "address": "string",
+            "phone": "string"}],
     }
 )
->>> scrape_legislators("https://www.ilga.gov/house/rep.asp?MemberID=3071")
+>>> scrape_legislators(
+    "https://www.ilga.gov/house/rep.asp?MemberID=3071"
+)
 {'name': 'Emanuel "Chris" Welch',
  'url': 'https://www.ilga.gov/house/Rep.asp?MemberID=3071',
  'district': '7th', 'party': 'D', 
- 'photo_url': 'https://www.ilga.gov/images/members/{5D419B94-66B4-4F3B-86F1-BFF37B3FA55C}.jpg',
+ 'photo_url': 
+ 'https://www.ilga.gov/images/members/{5D419B94-66B4-4F3B-86F1-BFF37B3FA55C}.jpg',
   'offices': [
-    {'name': 'Springfield Office', 'address': '300 Capitol Building, Springfield, IL 62706', 'phone': '(217) 782-5350'},
-    {'name': 'District Office', 'address': '10055 W. Roosevelt Rd., Suite E, Westchester, IL 60154', 'phone': '(708) 450-1000'}
+    {'name': 'Springfield Office',
+     'address': '300 Capitol Building, Springfield, IL 62706', 
+     'phone': '(217) 782-5350'},
+    {'name': 'District Office', 
+    'address': '10055 W. Roosevelt Rd., Suite E, Westchester, IL 60154',
+     'phone': '(708) 450-1000'}
    ]}
 ```
 
