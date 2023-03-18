@@ -1,9 +1,8 @@
 +++
 date = "2023-03-16T12:00:00-05:00"
 draft = false
-title = "Automated Scraping with GPT-4"
+title = "Automated Scraping with GPT-4, Part 1"
 +++
-
 
 Like most people I know, I've been watching the pace of improvements to LLMs like ChatGPT and GPT-4 with a mix of awe and trepidation. I've been wanting a small project to get to explore the APIs better, and recently decided I'd try to see if I could use it to automate web scraping.
 
