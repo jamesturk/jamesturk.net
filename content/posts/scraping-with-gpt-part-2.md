@@ -65,9 +65,9 @@ The good news is that for most of the examples I've tried, GPT-3.5-turbo perform
 
 It also means anyone with an OpenAI API key can play with the tool since not all accounts have GPT-4 access yet.
 
-The default behavior is to try 3.5 first, and then fall back to 4 if there's an invalid response or the request was too large. This can be a great cost-saving option if most of your requests work on 3.5 but a few fail/need a larger token limit.
+The default behavior is to try GPT-3.5-turbo first, and then fall back to 4 if there's an invalid response or the request was too large. This can be a great cost-saving option if most of your requests work on 3.5 but a few fail/need a larger token limit.
 
-Relatedly, I've made the prompt a little bit more detailed to try to get better results. 3.5 seems to produce invalid JSON a little bit more often than GPT-4 had been, so I've added some additional commands to help remedy that. I'm not sure how much they're helping at the moment but they fixed a couple of test cases I had.
+Relatedly, I've made the prompt a little bit more detailed to try to get better results. GPT-3.5 seems to produce invalid JSON a little bit more often than GPT-4 had been, so I've added some additional commands to help remedy that. I'm not sure how much they're helping at the moment but they fixed a couple of test cases I had.
 
 ## Experiments
 

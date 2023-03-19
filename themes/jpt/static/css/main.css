@@ -1,194 +1,232 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,500);
 
 /* general overrides */
-html, body {
-    font-family: 'Raleway', sans-serif;
-    height: 100%;
-    background-color: black;
+html,
+body {
+  font-family: 'Raleway', sans-serif;
+  height: 100%;
+  background-color: black;
 }
+
 .pure-menu {
-    background-color: black;
-    color: #888;
+  background-color: black;
+  color: #888;
 }
+
 .pure-menu-heading {
-    text-transform: none;
-    font-weight: 500;
-    color: #888;
+  text-transform: none;
+  font-weight: 500;
+  color: #888;
 }
+
 .pure-menu li a:hover {
-    background-color: #888;
-    color: black;
+  background-color: #888;
+  color: black;
 }
+
 a:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
+
 .err404 {
-    width: 100%;
-    font-size: 1.3em;
-    text-align: center;
-    padding-bottom: 4rem;
+  width: 100%;
+  font-size: 1.3em;
+  text-align: center;
+  padding-bottom: 4rem;
 }
+
 .err404 p {
-    margin: 0 20%;
-    color: white;
+  margin: 0 20%;
+  color: white;
 }
+
 .err404 a {
-    color: white;
+  color: white;
 }
 
 /* footer */
 .footer {
-    font-size: 0.8em;
-    background-color: black;
-    color: white;
-    padding: 8px 10% 2px 10%;
-    text-align: center;
-    height: 54px;     /* menu is 36px, so menu+footer+padding = 100px */
+  font-size: 0.8em;
+  background-color: black;
+  color: white;
+  padding: 8px 10% 2px 10%;
+  text-align: center;
+  height: 54px;
+  /* menu is 36px, so menu+footer+padding = 100px */
 }
+
 .footer a {
-    color: white;
+  color: white;
 }
 
 /* index.html */
 .background {
-    background: url('/img/city_lights_namerica_8k.jpg') no-repeat top center;
-    background-size: cover;
-    background-position: -50px -50px;
-    width: 100%;
-    display: table;
+  background: url('/img/city_lights_namerica_8k.jpg') no-repeat top center;
+  background-size: cover;
+  background-position: -50px -50px;
+  width: 100%;
+  display: table;
 }
+
 .banner {
-    text-align: center;
-    width: 100%;
-    margin-top: 3em;
-    margin-bottom: 1em;
-    display: table;
-    text-shadow: 0 1px 1px black;
+  text-align: center;
+  width: 100%;
+  margin-top: 3em;
+  margin-bottom: 1em;
+  display: table;
+  text-shadow: 0 1px 1px black;
 }
+
 .banner-head {
-    display: table-cell;
-    vertical-align: middle;
-    margin-bottom: 0;
-    font-size: 2.5em;
-    color: white;
-    font-weight: 500;
-    text-shadow: 0 1px 1px black;
+  display: table-cell;
+  vertical-align: middle;
+  margin-bottom: 0;
+  font-size: 2.5em;
+  color: white;
+  font-weight: 500;
+  text-shadow: 0 1px 1px black;
 }
+
 .bio {
-    margin: 0 20%;
-    text-align:  center;
-    color: #fff;
-    line-height: 1.5;
-    font-size: 1em;
-    font-weight: 500;
-    text-shadow: 0 1px 1px black;
+  margin: 0 20%;
+  text-align: center;
+  color: #fff;
+  line-height: 1.5;
+  font-size: 1em;
+  font-weight: 500;
+  text-shadow: 0 1px 1px black;
 }
+
 .bio a {
-    color: white;
+  color: white;
 }
+
 ul.social {
-    list-style-type: none;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    padding-left: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding-left: 0;
 }
+
 ul.social li {
-    text-align:  center;
-    list-style: none;
-    width: 25%;
-    font-size: 200%
+  text-align: center;
+  list-style: none;
+  width: 25%;
+  font-size: 200%
 }
+
 .projects {
-    padding-top: 1em;
-    color: white;
+  padding-top: 1em;
+  color: white;
 }
+
 .projects a {
-    color: white;
+  color: white;
 }
+
 .projects ul {
-    list-style-type: none;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    padding-left: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding-left: 0;
 }
+
 .projects ul li {
-    text-align:  center;
-    list-style: none;
-    width: 50%;
-    padding-bottom: 1em;
+  text-align: center;
+  list-style: none;
+  width: 50%;
+  padding-bottom: 1em;
 }
 
 /* post template */
 .nobackground {
-    width: 100%;
-    height: 100%;
-    display: table;
-    background: white;
+  width: 100%;
+  height: 100%;
+  display: table;
+  background: white;
 }
+
 .post {
-    background: white;
-    margin: 5% 10%;
+  background: white;
+  margin: 5% 10%;
 }
-.post a, .post a:visited, .post a:hover {
-    color: black;
+
+.post a,
+.post a:visited,
+.post a:hover {
+  color: black;
 }
+
 .post-title {
-    margin-bottom: 0px;
+  margin-bottom: 0px;
 }
+
 .post-body {
-    line-height: 1.5;
-    /* for small screens - overrides at 760px */
-    font-size: 1em;
-    margin-top: 1em;
+  line-height: 1.5;
+  /* for small screens - overrides at 760px */
+  font-size: 1em;
+  margin-top: 1em;
 }
+
 .post-body img {
   width: 100%;
 }
+
 .post-meta {
-    color: #777;
-    float: right;
-    clear: both;
+  color: #777;
+  float: right;
+  clear: both;
 }
+
 .post-footer {
   border-top: 1px solid #999;
   margin-top: 3rem;
   padding-top: 1rem;
 }
+
 .clear {
-    clear: both;
+  clear: both;
 }
+
 pre {
-    background: #eee;
-    margin: 0 1em;
-    padding: 1em;
+  background: #eee;
+  margin: 0 1em;
+  padding: 1em;
 }
+
 code {
-    font-size: 1em;
-    line-height: 1.3em;
+  font-size: 1em;
+  line-height: 1.3em;
+}
+
+div.highlight {
+  max-width: 400px;
 }
 
 
 /* post list */
 .posts {
-    list-style-type: none;
+  list-style-type: none;
 }
+
 .posts li {
-    margin-bottom: 0.8em;
+  margin-bottom: 0.8em;
 }
+
 .posts a {
-    font-size: 1.2em;
+  font-size: 1.2em;
 }
 
 
 /* linkblog */
 .timeline {
-    background-color: white;
-    padding: 1em 10%;
-    max-width: 800px;
+  background-color: white;
+  padding: 1em 10%;
+  max-width: 800px;
 }
 
 .logo {
@@ -199,6 +237,7 @@ code {
   text-indent: -9999px;
   vertical-align: middle;
 }
+
 .logo-big {
   display: inline-block;
   height: 30px;
@@ -207,45 +246,59 @@ code {
   text-indent: -9999px;
   vertical-align: middle;
 }
+
 .logo-sunlight {
   background-image: url(/img/icons/sun4.svg);
 }
+
 .logo-openstates {
   background-image: url(/img/icons/interstate.svg);
 }
+
 .logo-interview {
   background-image: url(/img/icons/interview.svg);
 }
+
 .logo-writing {
   background-image: url(/img/icons/writing.svg);
 }
+
 .logo-elsewhere {
   background-image: url(/img/icons/link4.svg);
 }
+
 .logo-presentation {
   background-image: url(/img/icons/presentation.svg);
 }
+
 .logo-white-openstates {
   background-image: url(/img/icons/white-openstates.svg);
 }
+
 .logo-white-scraper {
   background-image: url(/img/icons/white-scraper.svg);
 }
+
 .logo-white-spatula {
   background-image: url(/img/icons/white-spatula.svg);
 }
+
 .logo-white-validictory {
   background-image: url(/img/icons/white-graduation.svg);
 }
+
 .logo-white-ballot {
   background-image: url(/img/icons/white-ballot.svg);
 }
+
 .logo-white-honeypot {
   background-image: url(/img/icons/white-honeypot.svg);
 }
+
 .logo-white-markup {
   background-image: url(/img/icons/white-markup.svg);
 }
+
 .logo-white-jellyfish {
   background-image: url(/img/icons/white-jellyfish.svg);
 }
@@ -254,69 +307,87 @@ code {
 .entry {
   margin: 1em 1em;
 }
+
 .entry .date {
-  display: none;  /* overriden at 760 */
+  display: none;
+  /* overriden at 760 */
   float: right;
   font-size: 90%;
 }
+
 .entry a {
   vertical-align: middle;
   font-size: 120%;
   color: black;
   text-decoration: underline;
 }
+
 .entry a:hover {
   text-decoration: none;
 }
 
 /* social bar */
 .socialbar ul {
-    list-style-type: none;
-    display: flex;
-    padding-left: 1em;
+  list-style-type: none;
+  display: flex;
+  padding-left: 1em;
 }
+
 .socialbar ul li {
-    list-style: none;
-    padding-left: 2em;
-    color: white;
+  list-style: none;
+  padding-left: 2em;
+  color: white;
 }
+
 .socialbar ul li a {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
+
 .socialbar ul li a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* media query for screens over 760px */
 @media screen and (min-width: 760px) {
-    .background {
-        background-position: 0 -200px;
-    }
-    .bio {
-        font-size: 1.2em;
-    }
-    .post {
-        margin: 5% auto;
-        width: 700px;
-    }
-    .post-body {
-        font-size: 1.2em;
-        margin-top: 2em;
-    }
-    .timeline {
-        margin: 0 auto;
-        width: 700px;
-    }
-    .projects ul li {
-        width: 25%;
-    }
-    .entry {
-      margin: 1em 3em;
-    }
-    .entry .date {
-      display: inline;
-      float: right;
-      font-size: 90%;
-    }
+  .background {
+    background-position: 0 -200px;
+  }
+
+  .bio {
+    font-size: 1.2em;
+  }
+
+  .post {
+    margin: 5% auto;
+    width: 700px;
+  }
+
+  div.highlight {
+    max-width: 700px;
+  }
+
+  .post-body {
+    font-size: 1.2em;
+    margin-top: 2em;
+  }
+
+  .timeline {
+    margin: 0 auto;
+    width: 700px;
+  }
+
+  .projects ul li {
+    width: 25%;
+  }
+
+  .entry {
+    margin: 1em 3em;
+  }
+
+  .entry .date {
+    display: inline;
+    float: right;
+    font-size: 90%;
+  }
 }
