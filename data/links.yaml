@@ -7,8 +7,8 @@ links:
           title: Moving from (n)vim to VS Code in 2023
           url: /posts/vscode/
         - category: writing
-          date: 2023-03-17
-          title: Automated Web Scraping with GPT-4, Part 1
+          date: 2023-03-16
+          title: Automated Web Scraping with GPT, Part 1
           url: /posts/scraping-with-gpt-4/
         - category: writing
           date: 2023-03-19
