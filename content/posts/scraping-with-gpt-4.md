@@ -4,6 +4,8 @@ draft = false
 title = "Automated Scraping with GPT-4, Part 1"
 +++
 
+(Part 2 now available: [Automated Scraping with GPT-4, Part 2](/posts/scraping-with-gpt-part-2/)
+
 Like most people I know, I've been watching the pace of improvements to LLMs like ChatGPT and GPT-4 with a mix of awe and trepidation. I've been wanting a small project to get to explore the APIs better, and recently decided I'd try to see if I could use it to automate web scraping.
 
 For context, I've written a lot of web scrapers. For the better part of thirteen years, I ran [Open States](https://openstates.org), a project that scraped state legislative websites to make them more accessible to the public. The biggest challenge in running a project like that is keeping up with the constant changes to the websites you're scraping.
@@ -183,3 +185,5 @@ Depending on the way the data is on the page (e.g. some state sites have a JSON 
 ### What about pages with a lot of data?
 
 If the hint approach is not good enough, the 32k token limit should be enough to scrape a lot of data once it is available.
+
+(Part 2 now available: [Automated Scraping with GPT-4, Part 2](/posts/scraping-with-gpt-part-2/)
