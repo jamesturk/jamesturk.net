@@ -1,6 +1,7 @@
 ---
 title: "James Turk"
-image: /static/me.png
+image: "/static/me.png"
+image-shape: round
 about:
   template: solana
   links:

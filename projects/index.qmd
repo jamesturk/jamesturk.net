@@ -1,15 +1,19 @@
 ---
 title: "Projects"
-image: profile.jpg
+image: "/static/projects.png"
 about:
   template: solana
+  #template:  trestles
+  #template:  marquee
+  #template:  broadside
+
   links:
     - icon: github
       text: Github
       href: https://github.com/jamesturk/
 ---
 
-I've worked on dozens of open source projects over the years.
+I tend to release a lot of my work as open source projects. 
 
 I'm primarily a Python developer, but have worked on projects in C, C++, Go, Rust, JavaScript, C#, and Lua.
 
