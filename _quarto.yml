@@ -7,7 +7,7 @@ website:
   description: "James Turk's blog"
   navbar:
     right:
-      - href: about.qmd
+      - href: /about/
         text: About
       - icon: github
         href: https://github.com/jamesturk/

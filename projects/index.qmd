@@ -1,0 +1,67 @@
+---
+title: "Projects"
+image: profile.jpg
+about:
+  template: solana
+  links:
+    - icon: github
+      text: Github
+      href: https://github.com/jamesturk/
+---
+
+I've worked on dozens of open source projects over the years.
+
+I'm primarily a Python developer, but have worked on projects in C, C++, Go, Rust, JavaScript, C#, and Lua.
+
+## Active Projects
+
+At any given time I'm generally thinking about/actively working on a few projects.
+
+Here are the currently active ones:
+
+### scrapeghost
+
+![](https://github.com/jamesturk/scrapeghost/raw/main/docs/assets/scrapeghost.png)
+
+[scrapeghost](https://jamesturk.github.io/scrapeghost/)
+
+Experimental library for webscraping with GPT.
+
+I've been experimenting with using LLMs like GPT to convert HTML into JSON.
+
+### jellyfish
+
+![](/static/icons/white-jellyfish.svg)
+
+[jellyfish](https://jamesturk.github.io/jellyfish/)
+
+Fast implementations of common fuzzy string comparison and phonetic encoding algorithms.
+
+This project was created by my former colleague, Michael Stephens, back in 2010.
+Since then it's grown to be a widely-used library, in part due to the fact that it offerred fast C implementations of these algorithms.
+
+Years ago I wrote Go & Rust implementations of the algorithms as a way to learn a bit more about both languages.  I've just recently decided to make the Rust implementation the official one, using [PyO3](https://pyo3.rs/).
+
+I also plan to keep the Go implementation around as a reference implementation. [go-jellyfish](https://github.com/jamesturk/go-jellyfish/)
+
+### spatula
+
+![](/static/icons/white-spatula.svg)
+
+[spatula](https://jamesturk.github.io/spatula/)
+
+After spending over a decade writing (and perhaps more importantly, maintaining) scrapers in Python, I have some opinions about how to structure them.
+
+Spatula is a library that I've been working on to help me write scrapers in a more consistent way.
+
+## Stable Projects
+
+These projects are mostly dormant, but stable & maintained as needed.
+
+* [scrapelib](https://jamesturk.github.io/scrapelib/)
+* [django-honeypot](https://github.com/jamesturk/django-honeypot)
+* [django-markupfield](https://github.com/jamesturk/django-markupfield)
+
+## Other Projects
+
+For many others, see my [GitHub](https://github.com/jamesturk/).
