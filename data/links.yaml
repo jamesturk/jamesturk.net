@@ -1,11 +1,8 @@
----
 links:
-    2022:
         - category: openstates
           date: 2022-02-15
           title: Moving On From Open States
           url: https://blog.openstates.org/james-moving-on/
-    2021:
         - category: openstates
           date: 2021-02-04
           title: Open States Joins Civic Eagle
@@ -26,7 +23,6 @@ links:
           date: 2021-12-21
           title: Open States 2021 Virtual Summit
           url: https://blog.openstates.org/open-states-virtual-summit-2021/
-    2020:
         - category: openstates
           date: 2020-12-29
           title: December 2020 Open States Update
@@ -55,7 +51,6 @@ links:
           date: 2020-01-31
           title: January 2020 Open States Update
           url: https://blog.openstates.org/jan-2020-update/
-    2019:
         - category: openstates
           date: 2019-12-16
           title: Announcing Our 2020 Roadmap
@@ -76,7 +71,6 @@ links:
           date: 2019-01-03
           title: 2019 Session Updates
           url: https://blog.openstates.org/2019-session-updates-f4a6244e9755
-    2018:
         - category: openstates
           date: 2018-11-05
           title: More Ways to Get State Legislative Data
@@ -89,7 +83,6 @@ links:
           date: 2018-02-12
           title: Open States & Google Summer of Code 2018
           url: https://blog.openstates.org/open-states-google-summer-of-code-2018-24e6493cbc9e
-    2017:
         - category: openstates
           date: 2017-12-21
           title: Introducing the Open States GraphQL API
@@ -114,7 +107,6 @@ links:
           date: 2017-01-31
           url: https://blog.openstates.org/whats-next-in-2017-5932ff0baa5d
           title: "What's Next in 2017?"
-    2016:
         - category: openstates
           date: 2016-11-01
           url: https://blog.openstates.org/adopting-open-states-e837741e97da/
@@ -127,12 +119,10 @@ links:
           date: 2016-11-03
           url: https://blog.openstates.org/why-open-states-10caed7874c6/
           title: Why Open States?
-    2015:
         - category: sunlight
           date: 2015-02-04
           title: "#Hack4Congress Boston: Making our lawmakers more responsive to the public"
           url: https://sunlightfoundation.com/2015/02/04/hack4congress-boston/
-    2014:
         - category: sunlight
           date: 2014-05-12
           title: Highlights from the first-ever PoplusCon in Santiago
@@ -141,7 +131,6 @@ links:
           date: 2014-12-01
           title: How we’re updating Sunlight’s legislative APIs for 2015
           url: https://sunlightfoundation.com/2014/12/01/how-were-updating-sunlights-legislative-apis-for-2015/
-    2013:
         - category: openstates
           date: 2013-03-11
           title: "Open States: Transparency Report Card"
@@ -150,7 +139,6 @@ links:
           date: 2013-06-04
           title: National Day of Civic Hacking 2013
           url: https://sunlightfoundation.com/2013/06/04/national-day-of-civic-hacking-2013/
-    2012:
         - category: openstates
           date: 2012-03-12
           title: "Open States: 50!"
@@ -163,7 +151,6 @@ links:
           date: 2012-07-27
           title: A New Face For Open States
           url: https://blog.openstates.org/a-new-face/
-    2011:
         - category: openstates
           date: 2011-02-03
           title: New Hampshire Opens Its Legislative Data
@@ -182,9 +169,8 @@ links:
           url: https://blog.openstates.org/api-1-year-later/
         - category: sunlight
           date: 2011-09-26
-          title: "Labs Olympics 2011: How Is Babby?"
           url: https://sunlightfoundation.com/2011/09/26/how-is-babby/
-    2010:
+          title: "Labs Olympics 2011: How Is Babby?"
         - category: sunlight
           date: 2010-03-19
           title: Announcing Our Google Summer of Code 2010 Participation
@@ -201,7 +187,6 @@ links:
           date: 2010-09-01
           title: Introducing the Open State Project API
           url: https://blog.openstates.org/introducing-the-openstates-api/
-    2009:
         - category: sunlight
           date: 2009-01-08
           title: Looking At The NYTimes Congress API
@@ -222,7 +207,6 @@ links:
           date: 2009-10-27
           title: Recovery.gov Augmented Reality Mashup
           url: https://sunlightfoundation.com/2009/10/27/recoverygov-contracts-your-phone/
-    2008:
         - category: sunlight
           date: 2008-08-07
           title: “Cool project, what CMS did you guys use?”
@@ -231,7 +215,6 @@ links:
           date: 2008-11-06
           title: Open Letter to the Obama Administration [...]
           url: https://sunlightfoundation.com/2008/11/06/open-letter-to-the-obama-administration-on-how-to-shine-sunlight/
-    2007:
         - category: sunlight
           date: 2007-12-10
           title: polipoly – A tool for district boundary polygons
