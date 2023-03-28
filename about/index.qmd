@@ -1,6 +1,6 @@
 ---
 title: "James Turk"
-image: "/static/me.png"
+image: "/static/cosmic.png"
 image-shape: round
 about:
   template: solana
@@ -61,6 +61,9 @@ I helped found [Open States](https://openstates.org), and served as its lead dev
 
 ### Press
 
+* 2022 [Joining UChicago](https://cs.uchicago.edu/news/civic-tech-pioneer-james-turk-joins-uchicago-cs-to-teach-in-mpcs-capp/)
+* 2021 [Open States Joins Civic Eagle](https://www.pluralpolicy.com/enview-blog/open-states-joins-civic-eagle)
+* 2019 [Departing PBS](https://current.org/2019/01/ncprs-rocco-sets-retirement-hernandez-joins-wnet-and-other-comings-and-goings/)
 * 2016 [Why keep Open States going?](https://opensource.com/government/16/11/why-open-states)
 * 2015 [Technically.DC Interview](https://technical.ly/dc/2015/02/19/how-i-work-sunlight-labs-james-turk/)
 * 2012 [Open States project achieves grand milestone](https://opensource.com/government/12/3/open-states-project-achieves-grand-milestone)
