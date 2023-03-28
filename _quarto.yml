@@ -25,8 +25,9 @@ format:
     #theme: solar
     #theme: flatly/darkly
     #theme: journal
+    favicon: favicon.ico
     theme: lumen
-    css: styles.css
+    css: static/styles.css
     fontsize: 1.1em
     linestretch: 1.7
 

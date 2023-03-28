@@ -1,6 +1,7 @@
 ---
 date: "2023-03-18"
 title: "Automated Scraping with GPT, Part 2"
+categories: [python, gpt]
 ---
 
 ![A scrapeghost, appropriately drawn by DALL-E](dall-e-scrapeghost.png)

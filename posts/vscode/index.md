@@ -1,6 +1,7 @@
 ---
 date: "2023-01-07"
 title: "Moving from (n)vim to VS Code in 2023"
+categories: [tools]
 ---
 
 I've been a vim user for more than 15 years. Before then I would try a new editor every few months, Visual Studio, Komodo IDE, Kate, and JEdit are a few that I remember sticking with for a while before hitting some wall and looking elsewhere. So when I eventually took the time to learn vim and found that I really enjoyed working in it, I figured I was done switching editors.
