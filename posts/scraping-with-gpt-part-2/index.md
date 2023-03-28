@@ -1,8 +1,7 @@
-+++
-date = "2023-03-18T18:00:00-05:00"
-draft = false
-title = "Automated Scraping with GPT, Part 2"
-+++
+---
+date: "2023-03-18"
+title: "Automated Scraping with GPT, Part 2"
+---
 
 ![A scrapeghost, appropriately drawn by DALL-E](/post-images/dall-e-scrapeghost.png)
 

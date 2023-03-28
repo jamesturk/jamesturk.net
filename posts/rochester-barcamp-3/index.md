@@ -1,9 +1,7 @@
-+++
-date = "2008-04-08T12:00:00-05:00"
-draft = false
-title = "Rochester BarCamp 3"
-
-+++
+---
+date: "2008-04-08"
+title: "Rochester BarCamp 3"
+---
 
 [*an old post from 2008... not the best post but in a sense my introduction to organizing developers*]
 

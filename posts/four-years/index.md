@@ -1,9 +1,7 @@
-+++
-date = "2008-07-08T12:00:00-05:00"
-draft = false
-title = "Reflections On Four Years"
-
-+++
+---
+date: "2008-07-08"
+title: "Reflections On Four Years"
+---
 
 [*another old one, only lightly edited (despite inclination to delete the entire thing) - from shortly after I left RIT*]
 

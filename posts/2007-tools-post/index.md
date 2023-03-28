@@ -1,9 +1,8 @@
-+++
-date = "2007-11-07T12:00:00-05:00"
-draft = false
-title = "My Tools (2007)"
+---
+date: "2007-11-07"
+title: "My Tools (2007)"
+---
 
-+++
 
 *[This is an old post from a blog I had in 2007, I put it up here for posterity.  I'll write a 2015 version eventually to compare.]*
 

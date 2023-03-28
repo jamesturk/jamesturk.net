@@ -1,9 +1,7 @@
-+++
-date = "2011-02-24T12:00:00-05:00"
-draft = false
-title = "Today in History"
-
-+++
+---
+date: "2011-02-24"
+title: "Today in History"
+---
 
 Earlier today I noticed an email I was looking up was from exactly three years ago.  From there I wound up on a random path that had me reading emails from February 24th for the past 6 years. It wound up being a pretty interesting look at what I've been doing over the last few years that I thought I'd write up for my own benefit.
 

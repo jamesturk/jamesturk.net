@@ -1,9 +1,7 @@
-+++
-date = "2015-07-13T12:00:00-05:00"
-draft = false
-title = "Eight Years"
-
-+++
+---
+date: "2015-07-13"
+title: "Eight Years"
+---
 
 (*this post is about my employment at Sunlight, but is in no way a reflection of anything but my own personal sentiment*)
 

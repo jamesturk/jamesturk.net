@@ -1,10 +1,7 @@
-+++
-Description = ""
-date = "2015-03-26T15:23:30-04:00"
-title = "Deploying Static Sites to CloudFront"
-draft = false
-
-+++
+---
+date: "2015-03-26"
+title: "Deploying Static Sites to CloudFront"
+---
 
 Like many developers, I've written my own blog software half a dozen times.  I've probably spent a lot more time tweaking the software than writing posts so this time I decided to do something different.  I wanted to keep things as simple as possible but still have an excuse to learn a few new things.
 

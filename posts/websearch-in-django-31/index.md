@@ -1,9 +1,7 @@
-+++
-Description = ""
-date = "2020-06-17"
-title = "Postgres websearch in Django 3.1"
-draft = false
-+++
+---
+date: "2020-06-17"
+title: "Postgres websearch in Django 3.1"
+---
 
 Earlier this week, [Django 3.1 beta 1 was released](https://docs.djangoproject.com/en/dev/releases/3.1/).  While the big news is the addition of asynchronous views and middleware, there's a tiny feature I managed to [get added](https://github.com/django/django/pull/12215/commits/ff00a053478fee06bdfb4206c6d4e079e98640ff) that I wanted to bring a bit of attention to as it makes writing apps that use Postgres' full text search a little easier & nicer.
 

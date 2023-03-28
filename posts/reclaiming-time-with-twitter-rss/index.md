@@ -1,10 +1,7 @@
-+++
-Description = ""
-date = "2018-05-03T15:00:00-04:00"
-title = "Reclaiming Time with Twitter-as-RSS"
-draft = false
-
-+++
+---
+date: "2018-05-03"
+title: "Reclaiming Time with Twitter-as-RSS"
+---
 
 I’m sure there’s a german word for that moment when you close Twitter then think to yourself “I wonder what is going on over at twitter-dot-com” and immediately open it back up. It was all too often that I found myself either doing that or bouncing between that and some other distraction, not using my time the way that I’d like.
 

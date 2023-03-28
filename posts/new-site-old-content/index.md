@@ -1,8 +1,7 @@
-+++
-date = "2015-03-11T11:10:34-04:00"
-title = "New Site, Old Content"
-
-+++
+---
+date: "2015-03-11"
+title:  "New Site, Old Content"
+---
 
 Whenever I've had a personal site I've always found myself a bit paralyzed by the idea of who my audience is or should be and how it defines what I write.  At some point a couple years ago I decided I didn't really feel like maintaining a personal server and let my sporadically updated personal site disappear with a whimper.  I don't think anyone cared, especially not me.
 

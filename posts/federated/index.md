@@ -1,8 +1,7 @@
-+++
-date = "2022-11-04T12:00:00-05:00"
-draft = false
-title = "Federated"
-+++
+---
+date: "2022-11-04"
+title: "Federated"
+---
 
 ## What We Lost
 
