@@ -1,2 +1,6 @@
 public/
 .hugo_build.lock
+
+/.quarto/
+_freeze/
+_site/
