@@ -3,7 +3,7 @@ date: "2023-03-18"
 title: "Automated Scraping with GPT, Part 2"
 ---
 
-![A scrapeghost, appropriately drawn by DALL-E](/post-images/dall-e-scrapeghost.png)
+![A scrapeghost, appropriately drawn by DALL-E](dall-e-scrapeghost.png)
 
 A couple of days ago I wrote about [using GPT-4 to automate web scraping](/posts/scraping-with-gpt-4/). I was surprised at how well it worked for a first attempt and have been curious how far I go to make it useful.
 

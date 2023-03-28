@@ -2,14 +2,22 @@ project:
   type: website
 
 website:
-  title: "jamesturk.net-quarto"
+  title: "jamesturk.net"
+  site-url: https://jamesturk.net/
+  description: "James Turk's blog"
   navbar:
     right:
       - about.qmd
       - icon: github
-        href: https://github.com/
-      - icon: twitter
-        href: https://twitter.com
+        href: https://github.com/jamesturk/
+      - icon: mastodon
+        href: https://mastodon.social/@jamesturk/
+      - icon: envelope
+        href: mailto:contact@jamesturk.net
+      - icon: rss
+        href: index.xml
+    open-graph: true
+    twitter-card: true
 format:
   html:
     #theme: sandstone

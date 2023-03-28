@@ -19,7 +19,7 @@ So I came up with a solution that would solve both of these problems, why not re
 
 **Step 4)** Using [Inoreader](https://www.inoreader.com) I then [subscribed](https://blog.inoreader.com/2014/10/rowing-down-twitter-stream-with.html) to these 8 lists. So far I can say that Inoreader seems to do a great job with this, and the Plus plan costs just a few dollars a month and lets you create up to 30 Twitter feeds. Originally I had planned to cook something up myself to turn these lists into RSS feeds, but I appreciate not having to maintain this myself. Once they’re imported a twitter feed looks something like this:
 
-![I like the incredibly simple aesthetic, but there are other display options if this isn’t for you.](/post-images/inoreader.png)
+![I like the incredibly simple aesthetic, but there are other display options if this isn’t for you.](inoreader.png)
 
 (If you aren’t sure you want to do this but are curious — there is a free 30 day trial of Inoreader Pro, if there are other decent RSS readers that can do Twitter integration let me know and I’ll add them here.)
 
