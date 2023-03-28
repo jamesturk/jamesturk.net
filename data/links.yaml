@@ -1,24 +1,6 @@
 ---
-years: ['2023', '2022', '2021', '2020', '2019', '2018', '2017', '2016', '2015', '2014', '2013', '2012', '2011', '2010', '2009', '2008', '2007']
 links:
-    2023:
-        - category: writing
-          date: 2023-01-07
-          title: Moving from (n)vim to VS Code in 2023
-          url: /posts/vscode/
-        - category: writing
-          date: 2023-03-16
-          title: Automated Web Scraping with GPT, Part 1
-          url: /posts/scraping-with-gpt-4/
-        - category: writing
-          date: 2023-03-19
-          title: Automated Web Scraping with GPT, Part 2
-          url: /posts/scraping-with-gpt-part-2/
     2022:
-        - category: writing
-          date: 2022-11-05
-          title: Federated
-          url: /posts/federated/
         - category: openstates
           date: 2022-02-15
           title: Moving On From Open States
@@ -61,10 +43,6 @@ links:
           date: 2020-08-10
           title: August 2020 Open States Update
           url: https://blog.openstates.org/august-2020-update/
-        - category: writing
-          date: 2020-06-17
-          title: Postgres websearch in Django 3.1
-          url: /posts/websearch-in-django-31/
         - category: openstates
           date: 2020-04-10
           title: April 2020 Open States Update
@@ -107,10 +85,6 @@ links:
           date: 2018-10-19
           title: New Directions for Open States
           url: https://blog.openstates.org/new-directions-716cab38c357
-        - category: writing
-          date: 2018-05-03
-          title: Reclaiming Time with Twitter-as-RSS
-          url: /posts/reclaiming-time-with-twitter-rss/
         - category: openstates
           date: 2018-02-12
           title: Open States & Google Summer of Code 2018
@@ -153,31 +127,11 @@ links:
           date: 2016-11-03
           url: https://blog.openstates.org/why-open-states-10caed7874c6/
           title: Why Open States?
-        - category: elsewhere
-          date: 2016-11-16
-          title: Why keep Open States going?
-          url: https://opensource.com/government/16/11/why-open-states
     2015:
         - category: sunlight
           date: 2015-02-04
           title: "#Hack4Congress Boston: Making our lawmakers more responsive to the public"
           url: https://sunlightfoundation.com/2015/02/04/hack4congress-boston/
-        - category: interview
-          date: 2015-02-19
-          title: Technically.DC Interview
-          url: https://technical.ly/dc/2015/02/19/how-i-work-sunlight-labs-james-turk/
-        - category: presentation
-          date: 2015-07-11
-          title: Django Built a Nonprofit
-          url: "https://djangobirthday.com/talks/#django-nonprofit"
-        - category: writing
-          date: 2015-03-26
-          title: Deploying Static Sites to CloudFront
-          url: /posts/deploying-hugo-to-cloudfront/
-        - category: writing
-          date: 2015-07-13
-          title: Eight Years
-          url: /posts/eight-years/
     2014:
         - category: sunlight
           date: 2014-05-12
@@ -197,10 +151,6 @@ links:
           title: National Day of Civic Hacking 2013
           url: https://sunlightfoundation.com/2013/06/04/national-day-of-civic-hacking-2013/
     2012:
-        - category: presentation
-          date: 2012-08-07
-          title: Open Data, Open States (NCSL Summit 2012)
-          url: https://www.ncsl.org/documents/nalit/OpenData-Turk.pdf
         - category: openstates
           date: 2012-03-12
           title: "Open States: 50!"
@@ -213,19 +163,7 @@ links:
           date: 2012-07-27
           title: A New Face For Open States
           url: https://blog.openstates.org/a-new-face/
-        - category: elsewhere
-          date: 2012-03-13
-          title: "Open States project achieves grand milestone"
-          url: https://opensource.com/government/12/3/open-states-project-achieves-grand-milestone
     2011:
-        - category: interview
-          date: 2011-09-26
-          title: "Open States: Transparency for state governments using open data"
-          url: https://opensource.com/government/11/9/open-states-transparency-state-governments-using-open-data
-        - category: presentation
-          date: 2011-03-14
-          title: Opening Government With Python (PyCon 2011)
-          url: https://us.pycon.org/2011/schedule/presentations/285/
         - category: openstates
           date: 2011-02-03
           title: New Hampshire Opens Its Legislative Data
@@ -246,15 +184,7 @@ links:
           date: 2011-09-26
           title: "Labs Olympics 2011: How Is Babby?"
           url: https://sunlightfoundation.com/2011/09/26/how-is-babby/
-        - category: writing
-          date: 2011-02-24
-          title: Today in History
-          url: /posts/today-in-history/
     2010:
-        - category: presentation
-          date: 2010-10-06
-          url: https://open.blogs.nytimes.com/2010/09/24/timesopen-2-0-open-government-event/
-          title: "Open States (TimesOpen 2.0: Open Government)"
         - category: sunlight
           date: 2010-03-19
           title: Announcing Our Google Summer of Code 2010 Participation
@@ -293,10 +223,6 @@ links:
           title: Recovery.gov Augmented Reality Mashup
           url: https://sunlightfoundation.com/2009/10/27/recoverygov-contracts-your-phone/
     2008:
-        - category: interview
-          date: 2008-07-19
-          title: Netzpolitik Interview (Berlin)
-          url: https://netzpolitik.org/2008/netzpolitik-podcast-062-the-sunlight-foundation/
         - category: sunlight
           date: 2008-08-07
           title: “Cool project, what CMS did you guys use?”
@@ -305,20 +231,8 @@ links:
           date: 2008-11-06
           title: Open Letter to the Obama Administration [...]
           url: https://sunlightfoundation.com/2008/11/06/open-letter-to-the-obama-administration-on-how-to-shine-sunlight/
-        - category: writing
-          date: 2008-04-08
-          title: Rochester BarCamp 3
-          url: /posts/rochester-barcamp-3/
-        - category: writing
-          date: 2008-07-08
-          title: Reflections On Four Years
-          url: /posts/four-years/
     2007:
         - category: sunlight
           date: 2007-12-10
           title: polipoly – A tool for district boundary polygons
           url: https://sunlightfoundation.com/2007/12/10/polipoly/
-        - category: writing
-          date: 2007-11-07
-          title: My Tools (2007)
-          url: /posts/2007-tools-post/

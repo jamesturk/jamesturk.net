@@ -9,6 +9,8 @@ website:
     right:
       - href: /about/
         text: About
+      - href: /projects/
+        text: Projects
       - icon: github
         href: https://github.com/jamesturk/
       - icon: mastodon

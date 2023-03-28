@@ -48,3 +48,22 @@ I helped found [Open States](https://openstates.org), and served as its lead dev
 * 2009-2014: Project Lead while at Sunlight
 * 2016-2019: Led Open States as independent organization
 * 2019-2022: Led Open States while at Civic Eagle
+
+## Elsewhere
+
+### Old Blog Posts
+
+### Presentations
+
+* 2015 [Django Built a Nonprofit](https://djangobirthday.com/talks/#django-nonprofit)
+* 2012 [Open Data, Open States (NCSL Summit 2012)](https://www.ncsl.org/documents/nalit/OpenData-Turk.pdf)
+* 2011 [Opening Government With Python (PyCon 2011)](https://us.pycon.org/2011/schedule/presentations/285/)
+* 2010 [Open States (TimesOpen 2.0: Open Government)](https://open.blogs.nytimes.com/2010/09/24/timesopen-2-0-open-government-event/)
+
+### Press
+
+* 2016 [Why keep Open States going?](https://opensource.com/government/16/11/why-open-states)
+* 2015 [Technically.DC Interview](https://technical.ly/dc/2015/02/19/how-i-work-sunlight-labs-james-turk/)
+* 2012 [Open States project achieves grand milestone](https://opensource.com/government/12/3/open-states-project-achieves-grand-milestone)
+* 2011 [Open States: Transparency for state governments using open data](https://opensource.com/government/11/9/open-states-transparency-state-governments-using-open-data)
+* 2008 [Netzpolitik Interview (German)](https://netzpolitik.org/2008/netzpolitik-podcast-062-the-sunlight-foundation/)
