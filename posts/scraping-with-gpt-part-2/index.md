@@ -4,7 +4,7 @@ title: "Automated Scraping with GPT, Part 2"
 categories: [python, gpt]
 ---
 
-![A scrapeghost, appropriately drawn by DALL-E](dall-e-scrapeghost.png)
+![scrapeghost logo, not AI generated, just my lame attempt](https://github.com/jamesturk/scrapeghost/raw/main/docs/assets/scrapeghost.png)
 
 A couple of days ago I wrote about [using GPT-4 to automate web scraping](/posts/scraping-with-gpt-4/). I was surprised at how well it worked for a first attempt and have been curious how far I go to make it useful.
 

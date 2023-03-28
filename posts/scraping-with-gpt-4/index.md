@@ -2,6 +2,7 @@
 date: "2023-03-16"
 title: "Automated Scraping with GPT-4, Part 1"
 categories: ["python", "gpt"]
+image: dall-e-scrapeghost.png
 ---
 
 (Part 2 now available: [Automated Scraping with GPT-4, Part 2](/posts/scraping-with-gpt-part-2/))

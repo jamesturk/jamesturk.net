@@ -2,6 +2,7 @@
 date: "2022-11-04"
 title: "Federated"
 categories: [fediverse]
+image: fediverse_logo_prop.png
 ---
 
 ## What We Lost
