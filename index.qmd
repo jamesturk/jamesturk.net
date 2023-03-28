@@ -1,0 +1,16 @@
+---
+#title: "jamesturk.net"
+#title-block-banner: true
+listing:
+  feed: true
+  contents: posts
+  sort: "date desc"
+  type: default
+  categories: true
+  sort-ui: false
+  filter-ui: false
+  page-size: 5
+page-layout: full
+---
+
+
