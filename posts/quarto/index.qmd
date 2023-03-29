@@ -4,6 +4,8 @@ title: "New Quarto Site"
 categories: [quarto]
 ---
 
+![](./quarto.png)
+
 I've been wanting to write more for a while, and so decided to rebuild this site.
 
 When I came across [Quarto](https://quarto.org) for course notes a few months ago, I really liked working with it.
