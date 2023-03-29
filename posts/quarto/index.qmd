@@ -1,0 +1,27 @@
+---
+date: "2023-03-28"
+title: "New Quarto Site"
+categories: [quarto]
+---
+
+I've been wanting to write more for a while, and so decided to rebuild this site.
+
+When I came across [Quarto](https://quarto.org) for course notes a few months ago, I really liked working with it.
+If you haven't seen it, it's somewhere between traditional documentation tools like Sphinx and Jupyter notebooks.
+Quarto supports .qmd files, which are markdown files with the ability to run code inline and embed the output like a Jupyter notebook.
+
+Quarto has been a real pleasure to use, here's a code block with its output:
+ 
+
+```{python}
+# draw ascii pyramid
+for i in range(1, 10, 2):
+    print(" " * ((10 - i) // 2) + "*" * i)
+```
+
+There's a great [VSCode Extension](https://quarto.org/docs/tools/vscode.html) that enables live preview and code execution.
+
+I'm hoping to start writing more explorations like the recent posts about scraping with GPT ([Part 1](/posts/scraping-with-gpt-4/), [Part 2](/posts/scraping-with-gpt-part-2/)).
+I think the ability to embed code and output will lower the barrier to writing.
+
+*RIP Hugo version of this site, March 2015 - March 2023*

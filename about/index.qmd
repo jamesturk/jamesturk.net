@@ -20,9 +20,9 @@ about:
 
 ---
 
-Hi! I'm a software developer, civic technologist, and educator currently living in Chicago.
+Hi! I'm a software developer, civic technologist, and educator living in Chicago.
 
-I'm currently an Assistant Clinical Professor at the University of Chicago. I teach in the [Computational Analysis and Public Policy](https://capp.uchicago.edu/) and [Masters Program in Computer Science](https://masters.cs.uchicago.edu/).
+I'm an Assistant Clinical Professor at the University of Chicago. I teach in the [Computational Analysis and Public Policy](https://capp.uchicago.edu/) and [Masters Program in Computer Science](https://masters.cs.uchicago.edu/).
 
 I'm trying to write more, you can read [my latest posts here](/) or follow via [RSS](http://localhost:4444/index.xml).
 
@@ -34,7 +34,7 @@ Prior to this I was:
 * Founder/CTO, State Automata
 * Principal Engineer, [Princeton Gerrymandering Project](https://gerrymander.princeton.edu/)
 * Director of Technology, [Public Broadcasting Service](https://pbs.org)
-* Over a period of eight years at the [Sunlight Foundation](https://sunlightfoundation.com), I was a Software Developer, Open Source Coordinator, OpenStates.org and Municipal Data Team Lead, and the Director of Sunlight Labs.
+* While at [Sunlight Foundation](https://sunlightfoundation.com), I was a Software Developer, Open Source Coordinator, Open States and Municipal Data Team Lead, and the Director of Sunlight Labs.
 
 I've also done freelance work for organizations like:
 
