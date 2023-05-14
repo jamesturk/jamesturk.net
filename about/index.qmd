@@ -22,9 +22,9 @@ about:
 
 Hi! I'm a software developer, civic technologist, and educator living in Chicago.
 
-I'm an Assistant Clinical Professor at the University of Chicago. I teach in the [Computational Analysis and Public Policy](https://capp.uchicago.edu/) and [Masters Program in Computer Science](https://masters.cs.uchicago.edu/).
+I'm an Assistant Clinical Professor at the University of Chicago. I teach in the [Computational Analysis and Public Policy](https://capp.uchicago.edu/) and [Masters Program in Computer Science](https://masters.cs.uchicago.edu/) programs.
 
-I'm trying to write more, you can read [my latest posts here](/) or follow via [RSS](http://localhost:4444/index.xml).
+I'm trying to write more here, you can read [my latest posts here](/) or follow via [RSS](/index.xml).
 
 ### Jobs
 
@@ -42,27 +42,31 @@ I've also done freelance work for organizations like:
 * City Bureau - [City Scrapers](https://cityscrapers.org/)
 * Various Political Campaigns
 
+I am open to working on interesting projects for public good, please [contact me](contact@jamesturk.net) if you'd like to chat.
+
 ### Open States
 
-I helped found [Open States](https://openstates.org), and served as its lead developer from 2009-2014 and 2016-2022.
+I co-founded and then led [Open States](https://openstates.org) from 2009-2014 and 2016-2022.
 
-* 2009-2014: Project Lead while at Sunlight
-* 2016-2019: Led Open States as independent organization
-* 2019-2022: Led Open States while at Civic Eagle
+Open States is an open source project that makes state legislative data from all 50 states (and DC and PR!) available in a single website and API. It's used by journalists, researchers, and civic hackers to build tools that help people understand what their government is doing.
+
+My work on the project started with writing the initial code and doing some open source community building, and expanded into working on grants, managing a team of developers, and helping to build a sustainable organization and software project over the course of 13 years.  I also picked up more DevOps and frontend development skills than I'd ever planned to along the way.
+
+I am no longer involved with the project, it is now in the caring and capable hands of my friends over at [Plural](https://pluralpolicy.com).
 
 ## Elsewhere
 
-### Presentations
+### Selected Presentations
 
 * 2015 [Django Built a Nonprofit](https://djangobirthday.com/talks/#django-nonprofit)
 * 2012 [Open Data, Open States (NCSL Summit 2012)](https://www.ncsl.org/documents/nalit/OpenData-Turk.pdf)
 * 2011 [Opening Government With Python (PyCon 2011)](https://us.pycon.org/2011/schedule/presentations/285/)
 * 2010 [Open States (TimesOpen 2.0: Open Government)](https://open.blogs.nytimes.com/2010/09/24/timesopen-2-0-open-government-event/)
 
-### Press
+### Elsewhere
 
-* 2022 [Joining UChicago](https://cs.uchicago.edu/news/civic-tech-pioneer-james-turk-joins-uchicago-cs-to-teach-in-mpcs-capp/)
-* 2021 [Open States Joins Civic Eagle](https://www.pluralpolicy.com/enview-blog/open-states-joins-civic-eagle)
+* 2022 [Civic Tech Pioneer James Turk Joins UChicago CS to Teach in MPCS, CAPP](https://cs.uchicago.edu/news/civic-tech-pioneer-james-turk-joins-uchicago-cs-to-teach-in-mpcs-capp/)
+* 2021 [Open States Joins Plural](https://www.pluralpolicy.com/enview-blog/open-states-joins-civic-eagle)
 * 2019 [Departing PBS](https://current.org/2019/01/ncprs-rocco-sets-retirement-hernandez-joins-wnet-and-other-comings-and-goings/)
 * 2016 [Why keep Open States going?](https://opensource.com/government/16/11/why-open-states)
 * 2015 [Technically.DC Interview](https://technical.ly/dc/2015/02/19/how-i-work-sunlight-labs-james-turk/)

@@ -4,7 +4,7 @@ title: "New Quarto Site"
 categories: [quarto]
 ---
 
-![](./quarto.png)
+![](./quarto.png){.preview-image}
 
 I've been wanting to write more for a while, and so decided to rebuild this site.
 
