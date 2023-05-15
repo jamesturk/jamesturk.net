@@ -63,7 +63,7 @@ I am no longer involved with the project, it is now in the caring and capable ha
 * 2011 [Opening Government With Python (PyCon 2011)](https://us.pycon.org/2011/schedule/presentations/285/)
 * 2010 [Open States (TimesOpen 2.0: Open Government)](https://open.blogs.nytimes.com/2010/09/24/timesopen-2-0-open-government-event/)
 
-### Elsewhere
+### Press
 
 * 2022 [Civic Tech Pioneer James Turk Joins UChicago CS to Teach in MPCS, CAPP](https://cs.uchicago.edu/news/civic-tech-pioneer-james-turk-joins-uchicago-cs-to-teach-in-mpcs-capp/)
 * 2021 [Open States Joins Plural](https://www.pluralpolicy.com/enview-blog/open-states-joins-civic-eagle)
