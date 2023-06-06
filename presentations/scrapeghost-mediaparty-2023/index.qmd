@@ -300,6 +300,13 @@ GPT stands for generative pre-trained transformer, the key breakthrough was the 
 
 Prior models processed text sequentially, which made it difficult to learn long-range dependencies.
 
+## Key Terms
+
+* Attention
+* Tokens
+* Training Parameters
+* Temperature
+
 ## Attention
 
 ["Attention Is All You Need" - Vaswani et al](https://arxiv.org/abs/1706.03762)
@@ -326,11 +333,17 @@ Input text is split into tokens, and each token is assigned a vector representat
 
 Because attention is related to the square of the number of tokens, increasing the number of tokens increases the computational cost quadratically.
 
-## Training Parameters
+## Performance (Model Properties)
 
-A key factor in LLM performance is the number of parameters used during training.  The more parameters, the more data the model can learn.
+* More parameters: more accurate modeling, but slower training and inference.
+* More training data: more accurate modeling, but slower training.
+* Larger model: more accurate modeling, but slower training and significantly increased costs.
 
-OpenAI's GPT-4 is currently way out in front with an estimated 1 trillion parameters, but it isn't entirely clear if that'll be needed as smaller models are becoming more performant with new techniques and optimizations.
+## Performance (Request Properties)
+
+* Higher temperature: more creative, but less accurate.
+* More tokens: slower responses, higher costs
+
 
 ## OpenAI
 
@@ -342,6 +355,13 @@ This talk is focused on OpenAI because they are the clear leader in this space.
     * Means of acquiring data.
     * Leadership with questionable backgrounds.
     * Dropped the "open" part of their name quickly.
+
+## GPT-3.5 vs GPT-4
+
+| Model | Parameters | Token Limit | Cost Per 1k Tokens |
+| --- | --- | --- | --- |
+| OpenAI GPT-3.5 Turbo | 175 billion | 4096 | $0.002 |
+| OpenAI GPT-4 | **~1 trillion** | 8192 <br>(32k version coming "soon") | $0.03-0.12 |
 
 ## OpenAI's Chat Completions API
 
@@ -363,8 +383,6 @@ openai.ChatCompletion.create(
 
 | Model | Parameters | Training Data | Token Limit |
 | --- | --- | --- | --- |
-| OpenAI GPT-3 | 175 billion | 300 billion tokens | 4096 |
-| OpenAI GPT-4 | **~1 trillion?** | Unknown | 8192 (32k version not available yet) |
 | Anthropic Claude | 52 billion | 400 billion tokens | **100k** |
 | Google PaLM 2 | 340 billion | **3.6 trillion tokens** | 4096 |
 | Facebook LLaMa | Up to 65 billion | 1.4 trillion tokens | 2048 |
@@ -384,7 +402,7 @@ openai.ChatCompletion.create(
 ## Three Potential Approaches
 
 - Ask GPT to generate the code.
-- Ask GPT to generate the XPath.
+- Ask GPT to generate the selectors.
 - Ask GPT to extract the data.
 
 ## Asking GPT to generate the code
@@ -433,13 +451,14 @@ As you may have guessed, the solution to this is to add the HTML as context.
 - Need to fit input & output within token limit.
 - Code generated is often correct for given page, but not robust.
 - Do you trust GPT to generate code that's secure unsupervised?
+    [**You shouldn't**]{.red .fragment .fade-up}
 
-## Asking GPT to generate the XPath
+## Asking GPT to generate the selectors
 
-Why not have GPT generate the XPath?
+Why not have GPT generate the XPath or CSS selectors?
 
-- Still need multiple examples to generate robust XPath so wind up sending the HTML to each page.
-- XPath/CSS selectors aren't enough
+- Robustness is still a major issue, one page will often give overly-specific selectors.
+- XPath/CSS selectors are only enough in the simplest cases.
     - Consider our example from earlier, we couldn't get the name attribute since there's no XPath (or CSS) for the latter part of the &lt;h2&gt; tag.
     - Nested results require a different approach.
 
@@ -461,18 +480,49 @@ def get_details(url):
     resp = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
         messages=[
-                {"role": "system", "content": "When provided with HTML, return the equivalent JSON in the format {'name': '', 'position': '', 'hired': ''}"},
+                {"role": "system", "content": "When provided with HTML, return the equivalent JSON in the format {'name': '', 'position': '', 'hired': 'YYYY-MM-DD'}"},
                 {"role": "user", "content": response.text}
             ]
     )
-    print(resp.message.content)
+    print(resp.choices[0].message.content)
 
 get_details("https://scrapple.fly.dev/staff/3")
+get_details("https://scrapple.fly.dev/staff/3?style=new")
+get_details("https://scrapple.fly.dev/staff/3?style=experimental")
 ```
 
 ```
-{'name': 'Christopher Edwards', 'position': 'Help Desk', 'hired': '10/17/1948'}
+{"name": "Christopher Edwards", "position": "Help Desk", "hired": "1948-10-17"}
+{'name': 'Christopher Edwards', 'position': 'Help Desk', 'hired': '1948-10-17'}
+{"name": "Christopher Edwards", "position": "Help Desk", "hired": "1948-10-17"}
 ```
+
+## What Just Happened?
+
+* We passed the HTML as context.
+* GPT extracted the information, including the name, which required both HTML parsing and NLP.
+* GPT also reformatted the date for us since we asked for YYYY-MM-DD.
+* It returned valid JSON, which we can use directly.
+* Each request cost about $0.002.  (2/10 of a cent)
+* Each of the three page variants returned the same data from the same code.
+
+
+## Prompt Engineering
+
+Sometimes it returns additional content:
+
+`(Note: The 'status' field from the HTML is not included in the JSON format because it doesn't match any of the specified keys.)`
+
+This lets us know we left data on the table, which is cool.  But it also breaks the JSON parsing.
+
+A more sophisticated prompt can be used to control these kinds of cases.
+
+## Prompt Engineering
+
+You can also add additional context to coax GPT into returning the data you want.
+
+* "The user's name is in the &gt;h2&lt; tag."
+* "Ignore positions noted as 'vacant'."
 
 ## Building Guardrails & Constraints
 
@@ -492,7 +542,7 @@ When using this direct approach:
     * This can be slow and expensive.
 * You are limited to the data that is part of the initial response.
 * The token limit means you'll need to tailor your approach for large pages.
-
+    * Not great for list pages with 4k limit.
 
 ## scrapeghost
 

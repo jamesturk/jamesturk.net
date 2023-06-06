@@ -7,11 +7,12 @@ def get_details(url):
     resp = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
         messages=[
-                {"role": "system", "content": "When provided with HTML, return the equivalent JSON in the format {'name': '', 'position': '', 'hired': 'm d, Y'}"},
+                {"role": "system", "content": "When provided with HTML, return the equivalent JSON in the format {'name': '', 'position': '', 'hired': 'YYYY-MM-DD'}"},
                 {"role": "user", "content": response.text}
             ]
     )
-    return resp.choices[0]
+    print(resp.choices[0].message.content)
 
-resp = get_details("https://scrapple.fly.dev/staff/3")
-print(resp.message.content)
+get_details("https://scrapple.fly.dev/staff/3")
+get_details("https://scrapple.fly.dev/staff/3?style=new")
+get_details("https://scrapple.fly.dev/staff/3?style=experimental")
