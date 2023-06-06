@@ -219,15 +219,62 @@ This is the most overlooked part of web scraping - you are gonna need it again.
 * Need to compare transformed data to original data.
 * ...
 
+
 ## Breaking the Page
 
-TODO: a second version of the page with a different structure
+Next week, the page changes!
 
-No problem, we saved our code, let's just run it again.
+What was:
+
+![](detail-page.png){fig-align="center"}
+
+```html
+<h2 class="section">Employee Details for Eric Sound</h2>
+<div class="section">
+    <dl>
+    <dt>Position</dt>
+    <dd id="position">Manager</dd>
+    <dt>Status</dt>
+    <dd id="status">Current</dd>
+    <dt>Hired</dt>
+    <dd id="hired">3/6/1963</dd>
+    </dl>
+</div>
+```
+
+## Breaking the Page
+
+Becomes:
+
+![](detail-page-v2.png){fig-align="center"}
+
+```html
+<table>
+<thead>
+    <tr>
+    <th>Position</th>
+    <th>Status</th>
+    <th>Hired</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+    <td>Manager</td>
+    <td>Current</td>
+    <td>3/6/1963</td>
+    </tr>
+</tbody>
+</table>
+```
+
 
 ## Let's fix this every week forever
 
-TODO: third vesion?
+So we fix the code, and then there's a third version...
+
+![](detail-page-v3.png)
+
+## Let's fix this every week forever
 
 * We're stuck between choosing general selectors that can be too broad, or specific selectors that will break whenever the page changes.
 * No single right answer, but for most use cases, breakage is preferable to bad data.
