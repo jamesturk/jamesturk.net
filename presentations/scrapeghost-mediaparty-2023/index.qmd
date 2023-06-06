@@ -20,6 +20,14 @@ format:
 
 - **Not a machine learning expert.**
 
+## Audience Q's
+
+* [Who has written a web scraper?]{.fragment}
+* [Who has maintained a web scraper for more than a year?]{.fragment}
+    * [...more than 5?]{.fragment}
+    * [...more than 10?]{.fragment}
+* [Frameworks?]{.fragment}
+
 ## Today's Talk
 
 LLMs like GPT excel at "translation" tasks.
@@ -44,17 +52,14 @@ We'll be focused today on data extraction from HTML.
 
 This is *not* about using GPT to help you get around captcha, rate limiting, IP blocking, etc.
 
-## Overview
+---
 
-- Web Scraping Overview
-- GPT / LLM Primer
-- Using GPT for Web Scraping
-- Demo
-- When not to use GPT for scraping
-- Future Directions
-- Discussion
-
-# Web Scraping Overview
+<h2 style="color: green;">Web Scraping</h2>
+<h4>GPT</h4>
+<h4>Using GPT for Web Scraping</h4>
+<h4>What's Next?</h4>
+<h4>Demo</h4>
+<h4>Discussion</h4>
 
 ## What is Web Scraping?
 
@@ -280,7 +285,14 @@ So we fix the code, and then there's a third version...
 * No single right answer, but for most use cases, breakage is preferable to bad data.
 * You could do this for 13 years and still not be done...
 
-# GPT / LLM Primer
+---
+
+<h4>Web Scraping</h2>
+<h2 style="color: green;">GPT</h2>
+<h4>Using GPT for Web Scraping</h4>
+<h4>What's Next?</h4>
+<h4>Demo</h4>
+<h4>Discussion</h4>
 
 ## What is GPT?
 
@@ -320,17 +332,16 @@ A key factor in LLM performance is the number of parameters used during training
 
 OpenAI's GPT-4 is currently way out in front with an estimated 1 trillion parameters, but it isn't entirely clear if that'll be needed as smaller models are becoming more performant with new techniques and optimizations.
 
-## Beyond OpenAI
+## OpenAI
 
-| Model | Parameters | Training Data | Token Limit |
-| --- | --- | --- | --- |
-| OpenAI GPT-3 | 175 billion | 300 billion tokens | 4096 |
-| OpenAI GPT-4 | **~1 trillion?** | Unknown | 8192 (32k version not available yet) |
-| Anthropic Claude | 52 billion | 400 billion tokens | **100k** |
-| Google PaLM 2 | 340 billion | 3.6 trillion tokens | 4096 |
-| Facebook LLaMa | Up to 65 billion | 1.4 trillion tokens | 2048 |
+This talk is focused on OpenAI because they are the clear leader in this space.
 
-<https://www.anthropic.com/index/100k-context-windows>
+* GPT-4 is vastly superior to other offerings right now.
+* They have a public API (though there's a waitlist for GPT-4, 3.5-turbo is available now).
+* *I don't know if anyone should trust them.*
+    * Means of acquiring data.
+    * Leadership with questionable backgrounds.
+    * Dropped the "open" part of their name quickly.
 
 ## OpenAI's Chat Completions API
 
@@ -348,7 +359,27 @@ openai.ChatCompletion.create(
 )
 ```
 
-# Using GPT for Web Scraping
+## Beyond OpenAI
+
+| Model | Parameters | Training Data | Token Limit |
+| --- | --- | --- | --- |
+| OpenAI GPT-3 | 175 billion | 300 billion tokens | 4096 |
+| OpenAI GPT-4 | **~1 trillion?** | Unknown | 8192 (32k version not available yet) |
+| Anthropic Claude | 52 billion | 400 billion tokens | **100k** |
+| Google PaLM 2 | 340 billion | **3.6 trillion tokens** | 4096 |
+| Facebook LLaMa | Up to 65 billion | 1.4 trillion tokens | 2048 |
+
+<https://www.anthropic.com/index/100k-context-windows>
+
+
+---
+
+<h4>Web Scraping</h2>
+<h4>GPT</h4>
+<h2 style="color: green;">Using GPT for Web Scraping</h2>
+<h4>What's Next?</h4>
+<h4>Demo</h4>
+<h4>Discussion</h4>
 
 ## Three Potential Approaches
 
@@ -448,7 +479,22 @@ get_details("https://scrapple.fly.dev/staff/3")
 * LLMs are a bit unpredictable.  Much of this can be controlled with the aforementioned temperature parameter.   (temperature=0 is mostly deterministic, which is what we want here)
 * We can also do some validation on the returned data, and kick the results back to GPT if it doesn't match our schema.  (This approach was suggested by a few people on Mastodon, and has since been incorporated into the `scrapeghost` library.)
 
-## `scrapeghost`
+## Benefits
+
+When using this direct approach:
+
+* Many page changes will be handled automatically.
+* Pages are *not* required to be uniform. You can use the same model to scrape many different pages.
+
+## Drawbacks
+
+* Each request requires a separate API call.
+    * This can be slow and expensive.
+* You are limited to the data that is part of the initial response.
+* The token limit means you'll need to tailor your approach for large pages.
+
+
+## scrapeghost
 
 <https://jamesturk.github.io/scrapeghost/>
 
@@ -486,19 +532,32 @@ resp.data
    ]}
 ```
 
-## Benefits
+## Bonus CLI
 
-When using this direct approach:
+```{bash}
+$ scrapeghost https://www.ncleg.gov/Members/Biography/S/436  \
+        --schema "{'first_name': 'str', 'last_name': 'str',
+        'photo_url': 'url', 'offices': [] }'" \
+        --css div.card | python -m json.tool
+```
 
-* Many page changes will be handled automatically.
-* Pages are *not* required to be uniform. You can use the same model to scrape many different pages.
-
-## Drawbacks
-
-* Each request requires a separate API call.
-    * This can be slow and expensive.
-* You are limited to the data that is part of the initial response.
-* The token limit means you'll need to tailor your approach for large pages.
+```{json}
+{
+    "first_name": "Gale",
+    "last_name": "Adcock",
+    "photo_url": "https://www.ncleg.gov/Members/MemberImage/S/436/Low",
+    "offices": [
+        {
+            "type": "Mailing",
+            "address": "16 West Jones Street, Rm. 1104, Raleigh, NC 27601"
+        },
+        {
+            "type": "Office Phone",
+            "phone": "(919) 715-3036"
+        }
+    ]
+}
+```
 
 ## Features
 
@@ -514,7 +573,15 @@ When using this direct approach:
 
 To figure out a lot of this, we need a corpus of scraped data so we can see how different models, approaches to token reduction, etc. perform.
 
-# Future Directions & Implications
+---
+
+<h4>Web Scraping</h2>
+<h4>GPT</h4>
+<h4>Using GPT for Web Scraping</h4>
+<h2 style="color: green;">What's Next?</h2>
+<h4>Demo</h4>
+<h4>Discussion</h4>
+
 
 ## Ethical Concerns
 
@@ -543,7 +610,7 @@ Enormous (effectively unlimited) attention windows are likely coming.
 - Combined with other techniques, might be able to get a lot more out of smaller models.
 - Building corpus of scraped data for future training.
 
-# Hands on Demo
+# Demo
 
 Let's scrape https://mediaparty.org/about
 
