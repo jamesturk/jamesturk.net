@@ -52,9 +52,9 @@ We'll be focused today on data extraction from HTML.
 
 This is *not* about using GPT to help you get around captcha, rate limiting, IP blocking, etc.
 
----
+##
 
-<h2 style="color: green;">Web Scraping</h2>
+<h3 style="color: green;">Web Scraping</h3>
 <h4>GPT</h4>
 <h4>Using GPT for Web Scraping</h4>
 <h4>What's Next?</h4>
@@ -654,7 +654,7 @@ Enormous (effectively unlimited) attention windows are likely coming.
 - More control over the model
 - Eliminate vendor dependencies
 
-## Models explicitly trained for this task
+## Fine-tuning
 
 - Original plan was to fine-tune using scraped data, but hasn't been needed.
 - Combined with other techniques, might be able to get a lot more out of smaller models.
