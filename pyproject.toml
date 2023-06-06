@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "scrapeghost-presentation"
+version = "0.1.0"
+description = ""
+authors = ["James Turk <dev@jamesturk.net>"]
+readme = "README.md"
+packages = [{include = "scrapeghost_presentation"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+requests = "^2.31.0"
+lxml = "^4.9.2"
+cssselect = "^1.2.0"
+nbformat = "^5.9.0"
+nbclient = "^0.8.0"
+openai = "^0.27.7"
+
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.23.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

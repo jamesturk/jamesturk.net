@@ -1,0 +1,503 @@
+---
+title: "Automating Web Scraping with GPT"
+subtitle: "Media Party 2023"
+author: "James Turk"
+format:
+    revealjs:
+        theme: solarized
+        slide-number: true
+        echo: true
+---
+
+## My Background
+
+- Founded/Led Open States <https://openstates.org>
+    - bills, votes, legislators, committees, events for 50 states, DC, Puerto Rico
+    - ~250 actively maintained scrapers
+    - 13+ years of maintenance
+
+- Assistant Clinical Professor, University of Chicago (as of 2022)
+
+- **Not a machine learning expert.**
+
+## Today's Talk
+
+LLMs like GPT excel at "translation" tasks.
+
+* English → Spanish
+* English → Python
+* Python → Javascript
+
+[Why not HTML → JSON?]{.fragment}
+
+## Very Early Proof of Concept
+
+- Initial proof of concept in February, but GPT-3 token limits seemed too low to be useful.
+- March 14 2023: GPT-4 released with 8k token limit and promise of 32k around the corner.
+- March/April 2023: Published my experiences with this approach.
+- May 2023: Working on various applications and refining the approach.
+- Summer 2023: Focusing on gathering more real-world data to base future improvements on.
+
+## Not Covered Today
+
+We'll be focused today on data extraction from HTML.
+
+This is *not* about using GPT to help you get around captcha, rate limiting, IP blocking, etc.
+
+## Overview
+
+- Web Scraping Overview
+- GPT / LLM Primer
+- Using GPT for Web Scraping
+- Demo
+- When not to use GPT for scraping
+- Future Directions
+- Discussion
+
+# Web Scraping Overview
+
+## What is Web Scraping?
+
+Can be thought of as two parts:
+
+1. Make a request to a website
+2. Parse the response (e.g HTML to DOM) and extract the data you want
+
+## Making a Request
+
+```{python}
+#| eval: false
+import requests
+
+response = requests.get("https://www.example.com")
+```
+
+## Parsing the Response & Extracting Data
+
+```{python}
+#| eval: false
+#| code-line-numbers: "6-10"
+import requests
+import lxml.html
+
+response = requests.get("https://www.example.com")
+
+# process response
+tree = lxml.html.fromstring(response.text)
+title = tree.xpath("//title/text()")[0]
+description = tree.cssselect("meta[name=description]")[0].get("content")
+```
+
+## Aside: What isn't covered?
+
+Sometimes making the request is the hardest part:
+
+- Authentication (cookies, sessions, etc)
+- Captcha/Rate Limiting/Blocking
+- Javascript-heavy sites might string together content from *many* requests.
+
+## Let's Write a Scraper
+
+<https://scrapple.fly.dev/staff>
+
+* Two kinds of pages: list and detail.
+* For list pages we'll just grab the links & check if there's a next page.
+* For detail pages we'll grab the name, title, and bio.
+
+## Writing the Scraper: List Pages
+
+![](list-page.png)
+
+## Writing the Scraper: List Pages
+
+```html
+<table id="employees" style="max-height: 100%;">
+      <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Position Name</th>
+          <th>&nbsp;</th>
+        </tr>
+      </thead>
+      <tbody>
+      
+      <tr>
+        <td>Eric</td>
+        <td>Sound</td>
+        <td>Manager</td>
+        <td><a href="/staff/52">Details</a></td>
+      </tr>
+```
+
+## Writing the Scraper: List Pages
+
+```{python}
+import requests
+import lxml.html
+
+
+def get_links():
+    url = "https://scrapple.fly.dev/staff"
+    links = []
+
+    while True:
+        # make the request and parse the response
+        response = requests.get(url)
+        tree = lxml.html.fromstring(response.text)
+        tree.make_links_absolute(url)
+
+        # grab the links
+        links += tree.xpath("//a[contains(@href, '/staff/')]/@href")
+
+        # check if there's a next page
+        try:
+            url = tree.xpath("//a[contains(text(), 'Next')]/@href")[0]
+        except IndexError:
+            break
+
+    return links
+
+
+links = get_links()
+print(len(links), "detail links collected")
+```
+
+## Writing the Scraper: Detail Pages
+
+![](detail-page.png)
+
+## Writing the Scraper: Detail Pages
+
+```html
+<h2 class="section">Employee Details for Eric Sound</h2>
+<div class="section">
+    <dl>
+    <dt>Position</dt>
+    <dd id="position">Manager</dd>
+    <dt>Status</dt>
+    <dd id="status">Current</dd>
+    <dt>Hired</dt>
+    <dd id="hired">3/6/1963</dd>
+    </dl>
+</div>
+```
+
+## Writing the Scraper: Detail Pages
+
+```{python}
+
+
+def get_details(url):
+    response = requests.get(url)
+    tree = lxml.html.fromstring(response.text)
+
+    name = tree.xpath("//h2/text()")[0].replace("Employee Details for ", "")
+    position = tree.xpath("//dd[@id='position']/text()")[0]
+    status = tree.xpath("//dd[@id='status']/text()")[0]
+    hired_date = tree.xpath("//dd[@id='hired']/text()")[0]
+
+    return {
+        "name": name,
+        "position": position,
+        "status": status,
+        "hired_date": hired_date,
+    }
+
+
+print(get_details(links[0]))
+print("...")
+print(get_details(links[-1]))
+```
+
+## Run It Again
+
+This is the most overlooked part of web scraping - you are gonna need it again.
+
+* New info is added.
+* Noticed a bug.
+* Need to compare transformed data to original data.
+* ...
+
+## Breaking the Page
+
+TODO: a second version of the page with a different structure
+
+No problem, we saved our code, let's just run it again.
+
+## Let's fix this every week forever
+
+TODO: third vesion?
+
+* We're stuck between choosing general selectors that can be too broad, or specific selectors that will break whenever the page changes.
+* No single right answer, but for most use cases, breakage is preferable to bad data.
+* You could do this for 13 years and still not be done...
+
+# GPT / LLM Primer
+
+## What is GPT?
+
+GPT stands for generative pre-trained transformer, the key breakthrough was the advent of the transformer model.
+
+Prior models processed text sequentially, which made it difficult to learn long-range dependencies.
+
+## Attention
+
+["Attention Is All You Need" - Vaswani et al](https://arxiv.org/abs/1706.03762)
+
+Attention is a mechanism that allows the model to focus on specific parts of the input.
+
+This makes it possible to use the model for tasks like translation, summarization, and question answering.
+
+Attention is a key component of the transformer model, but is limited in the length of dependencies it can learn.
+
+## Tokens 
+
+The transformer model uses tokens to represent the input.
+
+<https://platform.openai.com/tokenizer>
+
+| Input Text | Tokenized Text | Number of Tokens |
+| --- | --- | --- |
+| This is sample text. | [This, is, sample, text, .] | 5 |
+| &lt;b&gt;This is sample text.&lt;/b&gt; | [&lt;, b, &gt;, This, is, sample, text, .&lt;/, b, &gt;] | 10 |
+
+
+Input text is split into tokens, and each token is assigned a vector representation.
+
+Because attention is related to the square of the number of tokens, increasing the number of tokens increases the computational cost quadratically.
+
+## Training Parameters
+
+A key factor in LLM performance is the number of parameters used during training.  The more parameters, the more data the model can learn.
+
+OpenAI's GPT-4 is currently way out in front with an estimated 1 trillion parameters, but it isn't entirely clear if that'll be needed as smaller models are becoming more performant with new techniques and optimizations.
+
+## Beyond OpenAI
+
+| Model | Parameters | Training Data | Token Limit |
+| --- | --- | --- | --- |
+| OpenAI GPT-3 | 175 billion | 300 billion tokens | 4096 |
+| OpenAI GPT-4 | **~1 trillion?** | Unknown | 8192 (32k version not available yet) |
+| Anthropic Claude | 52 billion | 400 billion tokens | **100k** |
+| Google PaLM 2 | 340 billion | 3.6 trillion tokens | 4096 |
+| Facebook LLaMa | Up to 65 billion | 1.4 trillion tokens | 2048 |
+
+<https://www.anthropic.com/index/100k-context-windows>
+
+## OpenAI's Chat Completions API
+
+```python
+import openai
+
+openai.ChatCompletion.create(
+  model="gpt-3.5-turbo",
+  messages=[
+        {"role": "system", "content": "You are a helpful assistant."},
+        {"role": "user", "content": "Who won the world series in 2020?"},
+        {"role": "assistant", "content": "The Los Angeles Dodgers won the World Series in 2020."},
+        {"role": "user", "content": "Where was it played?"}
+    ]
+)
+```
+
+# Using GPT for Web Scraping
+
+## Three Potential Approaches
+
+- Ask GPT to generate the code.
+- Ask GPT to generate the XPath.
+- Ask GPT to extract the data.
+
+## Asking GPT to generate the code
+
+Models like Codex and Copilot are trained on code, and can generate code that is syntactically correct.
+
+GPT-4 is a decent coder itself.
+
+"Please write a Python scraper to extract data from https://scrapple.fly.dev/staff"
+
+Certainly! Here's an example of a Python scraper using the requests and beautifulsoup4 libraries to extract data from the given website:
+
+```python
+import requests
+from bs4 import BeautifulSoup
+
+url = "https://scrapple.fly.dev/staff"
+
+# Send a GET request to the URL
+response = requests.get(url)
+
+# Parse the HTML content using BeautifulSoup
+soup = BeautifulSoup(response.content, "html.parser")
+
+# Find all staff members
+staff_members = soup.find_all("div", class_="staff-member")
+
+# Iterate over each staff member and extract the desired data
+for staff_member in staff_members:
+    name = staff_member.find("h2", class_="staff-member-name").text.strip()
+    position = staff_member.find("h3", class_="staff-member-position").text.strip()
+    bio = staff_member.find("div", class_="staff-member-bio").text.strip()
+
+    print("Name:", name)
+    print("Position:", position)
+    print("Bio:", bio)
+    print()
+```
+
+GPT-4 will at least warn that it can't access the URL, but then generate nearly identical code.  With a bit of prompting, it can generate code that uses the requests and lxml libraries instead.
+
+## Asking GPT to generate the code, with context
+
+As you may have guessed, the solution to this is to add the HTML as context.
+
+- Need to fit input & output within token limit.
+- Code generated is often correct for given page, but not robust.
+- Do you trust GPT to generate code that's secure unsupervised?
+
+## Asking GPT to generate the XPath
+
+Why not have GPT generate the XPath?
+
+- Still need multiple examples to generate robust XPath so wind up sending the HTML to each page.
+- XPath/CSS selectors aren't enough
+    - Consider our example from earlier, we couldn't get the name attribute since there's no XPath (or CSS) for the latter part of the &lt;h2&gt; tag.
+    - Nested results require a different approach.
+
+## Asking GPT to extract the data
+
+We're passing the context anyway, we can ask GPT to extract the data for us.
+
+"Given this HTML, please extract the name, position, and bio for each staff member into this JSON."
+
+## Our Scraper Revisited
+
+```python
+import requests
+import openai
+
+def get_details(url):
+    response = requests.get(url)
+
+    resp = openai.ChatCompletion.create(
+        model="gpt-3.5-turbo",
+        messages=[
+                {"role": "system", "content": "When provided with HTML, return the equivalent JSON in the format {'name': '', 'position': '', 'hired': ''}"},
+                {"role": "user", "content": response.text}
+            ]
+    )
+    print(resp.message.content)
+
+get_details("https://scrapple.fly.dev/staff/3")
+```
+
+```
+{'name': 'Christopher Edwards', 'position': 'Help Desk', 'hired': '10/17/1948'}
+```
+
+## Building Guardrails & Constraints
+
+* LLMs are a bit unpredictable.  Much of this can be controlled with the aforementioned temperature parameter.   (temperature=0 is mostly deterministic, which is what we want here)
+* We can also do some validation on the returned data, and kick the results back to GPT if it doesn't match our schema.  (This approach was suggested by a few people on Mastodon, and has since been incorporated into the `scrapeghost` library.)
+
+## `scrapeghost`
+
+<https://jamesturk.github.io/scrapeghost/>
+
+```python
+from scrapeghost import SchemaScraper
+scrape_legislators = SchemaScraper(
+  schema={
+      "name": "string",
+      "url": "url",
+      "district": "string",
+      "party": "string",
+      "photo_url": "url",
+      "offices": [{"name": "string", "address": "string", "phone": "string"}],
+  }
+)
+
+resp = scrape_legislators("https://www.ilga.gov/house/rep.asp?MemberID=3071")
+resp.data
+```
+
+## scrapeghost in Action
+
+```python
+{"name": "Emanuel 'Chris' Welch",
+ "url": "https://www.ilga.gov/house/Rep.asp?MemberID=3071",
+ "district": "7th", "party": "D", 
+ "photo_url": "https://www.ilga.gov/images/members/{5D419B94-66B4-4F3B-86F1-BFF37B3FA55C}.jpg",
+   "offices": [
+     {"name": "Springfield Office",
+      "address": "300 Capitol Building, Springfield, IL 62706",
+       "phone": "(217) 782-5350"},
+     {"name": "District Office",
+      "address": "10055 W. Roosevelt Rd., Suite E, Westchester, IL 60154",
+       "phone": "(708) 450-1000"}
+   ]}
+```
+
+## Benefits
+
+When using this direct approach:
+
+* Many page changes will be handled automatically.
+* Pages are *not* required to be uniform. You can use the same model to scrape many different pages.
+
+## Drawbacks
+
+* Each request requires a separate API call.
+    * This can be slow and expensive.
+* You are limited to the data that is part of the initial response.
+* The token limit means you'll need to tailor your approach for large pages.
+
+## Features
+
+* Automatic token reduction
+* Support for giving selector hints to further reduce tokens
+* Contains error handling/recovery logic
+* Optional result validation including hallucination check (was this content really on the page?)
+
+## Potential Future Improvments
+
+* `scrapeghost` already attempts automatic token reduction, but this could be improved.
+    * In March it wasn't clear if this would be solved by a 32k+ model, but it looks like for the forseeable future, 4-8k is a practical limit.
+
+To figure out a lot of this, we need a corpus of scraped data so we can see how different models, approaches to token reduction, etc. perform.
+
+# Future Directions & Implications
+
+## Ethical Concerns
+
+* [Making it easier to scrape data isn't a universally good thing.]{.fragment}
+* [How common is "hallucination" in this context? How to avoid/detect?]{.fragment}
+* [Prompt injection attacks.]{.fragment}
+* [Vendor lock-in.]{.fragment}
+
+## Enormous Attention Window
+
+Enormous (effectively unlimited) attention windows are likely coming.
+
+- Reduce need for token reduction
+- A different approach for list pages
+- Multi-page scraping in a single request?
+
+## GPT-3.5-equivalent on a laptop
+
+- Lower costs and latency
+- More control over the model
+- Eliminate vendor dependencies
+
+## Models explicitly trained for this task
+
+- Original plan was to fine-tune using scraped data, but hasn't been needed.
+- Combined with other techniques, might be able to get a lot more out of smaller models.
+- Building corpus of scraped data for future training.
+
+# Hands on Demo
+
+Let's scrape https://mediaparty.org/about
+
+# Discussion
