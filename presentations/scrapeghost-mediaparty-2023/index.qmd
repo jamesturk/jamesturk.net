@@ -296,9 +296,9 @@ So we fix the code, and then there's a third version...
 
 ## What is GPT?
 
-GPT stands for generative pre-trained transformer, the key breakthrough was the advent of the transformer model.
-
-Prior models processed text sequentially, which made it difficult to learn long-range dependencies.
+* Generative Pre-trained Transformer: the key breakthrough was the advent of the transformer model.
+* Transformer models use a mechanism called 'attention' to understand the context and relationships between words in a sentence, enabling it to generate coherent, human-like text.
+* Pre-training means it has been trained on a large corpus of text, further training is possible (fine-tuning) but not required.
 
 ## Key Terms
 
@@ -317,21 +317,18 @@ This makes it possible to use the model for tasks like translation, summarizatio
 
 Attention is a key component of the transformer model, but is limited in the length of dependencies it can learn.
 
-## Tokens 
-
-The transformer model uses tokens to represent the input.
+## Tokens {style="font-size: 0.7em;"}
 
 <https://platform.openai.com/tokenizer>
 
 | Input Text | Tokenized Text | Number of Tokens |
 | --- | --- | --- |
-| This is sample text. | [This, is, sample, text, .] | 5 |
+| This is sample text. | ["This", " is", " sample", "text", "."] | 5 |
+| Tokenization favors common English words. | ["Token", "ization", " favors", " common", " English", " words"] | 6 |
+| 2q09o3pdsjolikfj092qo3 | ["2", "q", "09", "o", "3", "pd", "s", "j", "ol", "ik", "f", "j", "09", "2", "q", "o", "3"] | 17 |
 | &lt;b&gt;This is sample text.&lt;/b&gt; | [&lt;, b, &gt;, This, is, sample, text, .&lt;/, b, &gt;] | 10 |
 
-
-Input text is split into tokens, and each token is assigned a vector representation.
-
-Because attention is related to the square of the number of tokens, increasing the number of tokens increases the computational cost quadratically.
+Attention is related to the square of the number of tokens, increasing the number of tokens increases the computational cost quadratically.
 
 ## Performance (Model Properties)
 
@@ -347,11 +344,11 @@ Because attention is related to the square of the number of tokens, increasing t
 
 ## OpenAI
 
-This talk is focused on OpenAI because they are the clear leader in this space.
+This talk is focused on OpenAI because they are the clear leader in this space today.
 
 * GPT-4 is vastly superior to other offerings right now.
 * They have a public API (though there's a waitlist for GPT-4, 3.5-turbo is available now).
-* *I don't know if anyone should trust them.*
+* *Not an endorsement of their business*
     * Means of acquiring data.
     * Leadership with questionable backgrounds.
     * Dropped the "open" part of their name quickly.
@@ -360,8 +357,8 @@ This talk is focused on OpenAI because they are the clear leader in this space.
 
 | Model | Parameters | Token Limit | Cost Per 1k Tokens |
 | --- | --- | --- | --- |
-| OpenAI GPT-3.5 Turbo | 175 billion | 4096 | $0.002 |
-| OpenAI GPT-4 | **~1 trillion** | 8192 <br>(32k version coming "soon") | $0.03-0.12 |
+| GPT-3.5 Turbo | 175 billion | 4096 | $0.002 |
+| GPT-4 | **~1 trillion** | 8192 <br>(32k version coming "soon") | $0.03-0.12 |
 
 ## OpenAI's Chat Completions API
 
@@ -399,36 +396,27 @@ openai.ChatCompletion.create(
 <h4>Demo</h4>
 <h4>Discussion</h4>
 
-## Three Potential Approaches
-
-- Ask GPT to generate the code.
-- Ask GPT to generate the selectors.
-- Ask GPT to extract the data.
-
-## Asking GPT to generate the code
+## Just ask GPT to generate the code
 
 Models like Codex and Copilot are trained on code, and can generate code that is syntactically correct.
 
 GPT-4 is a decent coder itself.
 
-"Please write a Python scraper to extract data from https://scrapple.fly.dev/staff"
+["Please write a Python scraper to extract data from https://scrapple.fly.dev/staff and return it as JSON"]{style="font-size: 0.7em;"}
 
-Certainly! Here's an example of a Python scraper using the requests and beautifulsoup4 libraries to extract data from the given website:
+## But... {style="font-size: 0.7em;"}
 
 ```python
 import requests
 from bs4 import BeautifulSoup
 
-url = "https://scrapple.fly.dev/staff"
-
-# Send a GET request to the URL
-response = requests.get(url)
-
-# Parse the HTML content using BeautifulSoup
+response = requests.get("https://scrapple.fly.dev/staff")
 soup = BeautifulSoup(response.content, "html.parser")
 
 # Find all staff members
 staff_members = soup.find_all("div", class_="staff-member")
+
+results = []
 
 # Iterate over each staff member and extract the desired data
 for staff_member in staff_members:
@@ -436,13 +424,12 @@ for staff_member in staff_members:
     position = staff_member.find("h3", class_="staff-member-position").text.strip()
     bio = staff_member.find("div", class_="staff-member-bio").text.strip()
 
-    print("Name:", name)
-    print("Position:", position)
-    print("Bio:", bio)
-    print()
+    results.append({"name": name, "position": position, "bio": bio})
 ```
 
-GPT-4 will at least warn that it can't access the URL, but then generate nearly identical code.  With a bit of prompting, it can generate code that uses the requests and lxml libraries instead.
+GPT-3.5 generates the code with no complaints.
+
+GPT-4 will at least warn that it can't access the URL, but then generate nearly identical code.
 
 ## Asking GPT to generate the code, with context
 
@@ -451,7 +438,7 @@ As you may have guessed, the solution to this is to add the HTML as context.
 - Need to fit input & output within token limit.
 - Code generated is often correct for given page, but not robust.
 - Do you trust GPT to generate code that's secure unsupervised?
-    [**You shouldn't**]{.red .fragment .fade-up}
+    [**You shouldn't.**]{style="color: red;" .fragment .fade-up}
 
 ## Asking GPT to generate the selectors
 
@@ -459,14 +446,18 @@ Why not have GPT generate the XPath or CSS selectors?
 
 - Robustness is still a major issue, one page will often give overly-specific selectors.
 - XPath/CSS selectors are only enough in the simplest cases.
-    - Consider our example from earlier, we couldn't get the name attribute since there's no XPath (or CSS) for the latter part of the &lt;h2&gt; tag.
-    - Nested results require a different approach.
+
+```html
+<h2>Employee Details for Eric Sound</h2>
+<span>Phone</span><span>555-555-5555</span>
+<span>Fax</span><span>555-555-5555</span>
+```
 
 ## Asking GPT to extract the data
 
 We're passing the context anyway, we can ask GPT to extract the data for us.
 
-"Given this HTML, please extract the name, position, and bio for each staff member into this JSON."
+*"When provided with HTML, return the equivalent JSON in the format {'name': '', 'position': '', 'hired': 'YYYY-MM-DD'}"*
 
 ## Our Scraper Revisited
 
@@ -487,24 +478,24 @@ def get_details(url):
     print(resp.choices[0].message.content)
 
 get_details("https://scrapple.fly.dev/staff/3")
-get_details("https://scrapple.fly.dev/staff/3?style=new")
-get_details("https://scrapple.fly.dev/staff/3?style=experimental")
+get_details("https://scrapple.fly.dev/staff/4?style=new")
+get_details("https://scrapple.fly.dev/staff/5?style=experimental")
 ```
 
 ```
 {"name": "Christopher Edwards", "position": "Help Desk", "hired": "1948-10-17"}
-{'name': 'Christopher Edwards', 'position': 'Help Desk', 'hired': '1948-10-17'}
-{"name": "Christopher Edwards", "position": "Help Desk", "hired": "1948-10-17"}
+{"name": "Ashley Taylor", "position": "Security Specialist", "hired": "1948-10-18"}
+{'name': 'Michael Hernandez', 'position': 'Security Administrator', 'hired': '2019-02-15'}
 ```
 
 ## What Just Happened?
 
-* We passed the HTML as context.
+* We passed the HTML as context as well as a JSON "template".
 * GPT extracted the information, including the name, which required both HTML parsing and NLP.
 * GPT also reformatted the date for us since we asked for YYYY-MM-DD.
-* It returned valid JSON, which we can use directly.
+* It returned valid JSON, which we can use directly. (Except last one!)
 * Each request cost about $0.002.  (2/10 of a cent)
-* Each of the three page variants returned the same data from the same code.
+* Each of the three page variants worked, despite different HTML structure.
 
 
 ## Prompt Engineering
@@ -521,7 +512,9 @@ A more sophisticated prompt can be used to control these kinds of cases.
 
 You can also add additional context to coax GPT into returning the data you want.
 
-* "The user's name is in the &gt;h2&lt; tag."
+* "Ensure that JSON uses double quotes."
+* "If data is missing from the HTML, represent it with a null."
+* "The user's name is in the &lt;h2&gt; tag."
 * "Ignore positions noted as 'vacant'."
 
 ## Building Guardrails & Constraints
@@ -613,8 +606,9 @@ $ scrapeghost https://www.ncleg.gov/Members/Biography/S/436  \
 
 * Automatic token reduction
 * Support for giving selector hints to further reduce tokens
-* Contains error handling/recovery logic
+* Built-in error handling/recovery logic
 * Optional result validation including hallucination check (was this content really on the page?)
+* Experimental pagination support & chunking of large pages
 
 ## Potential Future Improvments
 

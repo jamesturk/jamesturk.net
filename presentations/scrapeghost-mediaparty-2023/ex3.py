@@ -14,5 +14,5 @@ def get_details(url):
     print(resp.choices[0].message.content)
 
 get_details("https://scrapple.fly.dev/staff/3")
-get_details("https://scrapple.fly.dev/staff/3?style=new")
-get_details("https://scrapple.fly.dev/staff/3?style=experimental")
+get_details("https://scrapple.fly.dev/staff/4?style=new")
+get_details("https://scrapple.fly.dev/staff/5?style=experimental")
