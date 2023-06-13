@@ -656,7 +656,7 @@ Enormous (effectively unlimited) attention windows are likely coming.
 
 # Demo
 
-Let's scrape https://mediaparty.org/about
+Let's scrape https://mediapartychicago2023.sched.com/
 
 # Discussion
 
