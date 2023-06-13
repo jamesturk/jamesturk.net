@@ -1,0 +1,14 @@
+---
+date: "2023-06-10"
+title: "Media Party 2023 Presentation: Automating Web Scraping with GPT"
+categories: ["python", "gpt", "presentations"]
+image: logo.png
+---
+
+## Media Party 2023 Presentation: Web Scraping with GPT
+
+Media Party is a conference that "facilitates the intersection between the media and technology industry in an innovative, international and hands-on way."
+
+This year was their first one in the US, and it was conveniently here in my backyard. The organizers were nice enough to invite me to speak on the work I've been doing recently on web scraping with GPT.
+
+If you're interested, my slides are available here: [Automating Web Scraping with GPT](/presentations/scrapeghost-mediaparty-2023/).
