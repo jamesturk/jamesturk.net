@@ -34,7 +34,7 @@ Prior to this I was:
 * Founder/CTO, State Automata
 * Principal Engineer, [Princeton Gerrymandering Project](https://gerrymander.princeton.edu/)
 * Director of Technology, [Public Broadcasting Service](https://pbs.org)
-* While at [Sunlight Foundation](https://sunlightfoundation.com), I was a Software Developer, Open Source Coordinator, Open States and Municipal Data Team Lead, and the Director of Sunlight Labs.
+* Various roles while at [Sunlight Foundation](https://sunlightfoundation.com). Software Developer, Open Source Coordinator, Open States and Municipal Data Team Lead, and the Director of Sunlight Labs.
 
 I've also done freelance work for organizations like:
 
@@ -58,6 +58,7 @@ I am no longer involved with the project, it is now in the caring and capable ha
 
 ### Selected Presentations
 
+* 2023 [Automating Web Scraping with GPT](/presentations/scrapeghost-mediaparty-2023/)
 * 2015 [Django Built a Nonprofit](https://djangobirthday.com/talks/#django-nonprofit)
 * 2012 [Open Data, Open States (NCSL Summit 2012)](https://www.ncsl.org/documents/nalit/OpenData-Turk.pdf)
 * 2011 [Opening Government With Python (PyCon 2011)](https://us.pycon.org/2011/schedule/presentations/285/)
