@@ -1,7 +1,7 @@
 ---
 date: "2023-06-21"
 title: "jellyfish 1.0 & The Transition to Rust"
-categories: [rust, jellyfish]
+categories: [rust, jellyfish, python]
 #image: fediverse_logo_prop.png
 ---
 

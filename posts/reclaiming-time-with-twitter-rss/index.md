@@ -1,6 +1,7 @@
 ---
 date: "2018-05-03"
 title: "Reclaiming Time with Twitter-as-RSS"
+categories: ["tools"]
 ---
 
 I’m sure there’s a german word for that moment when you close Twitter then think to yourself “I wonder what is going on over at twitter-dot-com” and immediately open it back up. It was all too often that I found myself either doing that or bouncing between that and some other distraction, not using my time the way that I’d like.
