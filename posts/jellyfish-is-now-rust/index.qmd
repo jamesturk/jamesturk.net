@@ -1,15 +1,15 @@
 ---
-date: "2023-06-21"
+date: "2023-06-27"
 title: "jellyfish 1.0 & The Transition to Rust"
 categories: [rust, jellyfish, python]
 #image: fediverse_logo_prop.png
 ---
 
-Back [in 2010](https://github.com/jamesturk/jellyfish/commits/main?after=2ebc2c647eafce3036d12814b0247cdd55e0be4d+489&branch=main&qualified_name=refs%2Fheads%2Fmain), my colleague Michael created a Python library with C implementations of a bunch of common string distance algorithms. I remember wanting to call it `strfry` but `jellyfish` won in the end. I eventually took over maintenance of the library and have been maintaining it ever since.
+Back [in 2010](https://github.com/jamesturk/jellyfish/commits/main?after=2ebc2c647eafce3036d12814b0247cdd55e0be4d+489&branch=main&qualified_name=refs%2Fheads%2Fmain), my colleague Michael created a Python library with C implementations of a bunch of common string distance algorithms. I remember wanting to call it `strfry` at one point but `jellyfish` won in the end. A year or so later I eventually took over maintenance of the library and didn't give it much thought for a while & certainly didn't expect it to become the most widely-used library I currently maintain.
 
-(So much so that when I inherited course materials for one of the courses I'm now teaching, I was surprised to find that they'd been using `jellyfish`, a fun surprise.)
+(It actually took a while to realize how popular it had become since I don't make a habit of checking download stats or anything similar. One sign was when I inherited course materials for one of the courses I'm now teaching, and found that they were using `jellyfish` in the course materials.)
 
-It's become fairly popular in recent years as Python's role in data science has risen to prominence. One of the unique features is that it has C implementations with Python fallbacks for each of these algorithms, helping immensely with speed but making maintenance & packaging more of a pain.
+As more and more people use Python for record linkage type tasks, the library has found lots of use. It helps that it has C implementations with Python fallbacks for each of these algorithms, helping immensely with speed but making maintenance & packaging more of a pain.
 
 Over the years I'd written [Go](https://github.com/jamesturk/go-jellyfish) and Rust ports of the library. It was mainly an exercise to help me get familiar with those languages. I'd also had in the back of my mind that it'd be nice to stop maintaining the C code at some point, and maybe one of those would provide a path forward someday.
 
@@ -19,7 +19,7 @@ I'd been aware of [PyO3](https://github.com/PyO3/pyo3) for a while, and a few mo
 
 I already knew it passed all the same tests, since in doing this work I'd parametrized the tests to run against all four implementations of the algorithms.
 
-It was a day or two's worth of work to figure out the [maturin](https://github.com/PyO3/maturin) build system, thanks to some helpful people on their forum for helping me understand best practices.
+It was no more than a day or two's worth of work to figure out the [maturin](https://github.com/PyO3/maturin) build system, thanks to some helpful people on their forum for helping me understand best practices.
 
 If you're curious how it works, [this file](https://github.com/jamesturk/jellyfish/blob/main/src/rustyfish.rs) creates the Python bindings for the Rust functions. This, and following maturin's instructions for building packages is all it took.
 
@@ -43,6 +43,6 @@ A neat side effect of the way the package works is that the Rust version of the 
 
 I put out Version 0.11 with the Rust backend a couple of months ago and the sky hasn't fallen. I decided to wait a bit longer in case somehow this was a disaster, but it's been smooth sailing. It also feels like it'll be much easier to maintain going forward, which is a big win.
 
-And with those nagging Unicode inconsistencies out of the way, it feels like this 13 year old library can finally hit 1.0!
+And with those nagging Unicode inconsistencies out of the way, it felt like this 13 year old library can finally hit 1.0.  Last week I pushed out jellyfish 1.0.0. I'm glad that it has been useful to so many people over the years, and know this new update will help ensure consistency & stability going forward.
 
 I'd also like take the opportunity to say [thanks to everyone that's ever contributed to jellyfish](https://github.com/jamesturk/jellyfish/graphs/contributors) or written about it. I'm glad it continues to be useful to so many people.
