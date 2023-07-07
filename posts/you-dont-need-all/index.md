@@ -137,6 +137,19 @@ This will expose `importers`, `exporters`, and `transformers` as members of the 
 
 Those submodules could then define their own `__init__.py` files which import the names you'd like to be exposed within them.
 
+## What About Linters?
+
+(*edit: added July 7th 2023*)
+
+I've heard from a few people that this breaks their linter.
+
+`flake8` and `ruff` (as well as others I'd imagine) do indeed complain about unused imports if `__all__` isn't defined. Lots of people solve this by defining a traditional
+`__all__`.
+
+Another option is to add `# noqa` to the import lines, or disable the warning however your particular linter allows.
+
+I understand some people have an allergy to `# noqa` but let me pose it this way: If you're just adding code just to appease your linter, `# noqa` is adding less code than `__all__`, and doesn't require you to maintain a list of names in two places.
+
 ## Bonus: Banning * Imports
 
 If you're like me, you may wonder "can we *prevent* users from using `from module import *` syntax?"
